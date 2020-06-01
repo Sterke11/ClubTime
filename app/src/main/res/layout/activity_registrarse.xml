@@ -8,10 +8,34 @@
 
     <ImageView
         android:id="@+id/fondo"
-        android:layout_width="419dp"
-        android:layout_height="587dp"
+        android:layout_width="413dp"
+        android:layout_height="573dp"
         android:src="@drawable/fondogrande"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <vector
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:aapt="http://schemas.android.com/aapt"
+        android:width="58.33dp"
+        android:height="58.33dp"
+        android:viewportWidth="58.33"
+        android:viewportHeight="58.33"
+        >
+
+        <group>
+
+            <clip-path
+                android:pathData="M0 0H58.3333V58.3333H0V0Z"
+                />
+
+            <path
+                android:pathData="M0 0V58.3333H58.3333V0"
+                android:fillColor="#56CCF2"
+                />
+
+        </group>
+
+    </vector>
 </android.support.constraint.ConstraintLayout>

@@ -100,16 +100,6 @@
         app:layout_constraintStart_toStartOf="@+id/Fondo"
         app:layout_constraintTop_toBottomOf="@+id/Logo" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="75dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="60dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:srcCompat="@drawable/flechaderecha" />
-
     <EditText
         android:id="@+id/tvResPass"
         android:layout_width="0dp"
@@ -139,6 +129,20 @@
         app:layout_constraintBottom_toBottomOf="@+id/Fondo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btIniciarSesion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/flechaderecha"
+        android:shadowColor="#00FFFFFF"
+        android:text=""
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/tvRegistrarse"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
 
 </android.support.constraint.ConstraintLayout>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tv_nombre"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:backgroundTint="#FFFFFF"
+    tools:context=".SignUp">
+
+    <Button
+        android:id="@+id/bt_Registra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="84dp"
+        android:background="@drawable/botonazulfuertea"
+        android:paddingBottom="10px"
+        android:text="Registrarse"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/et_ApellPat"
+        android:layout_width="239dp"
+        android:layout_height="38dp"
+
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/rounded_border_textview"
+        android:paddingLeft="10px"
+        android:paddingTop="10px"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="#0091BF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tv_Nombre3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/et_apellidoMat"
+        android:layout_width="239dp"
+        android:layout_height="38dp"
+
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/rounded_border_textview"
+        android:paddingLeft="10px"
+        android:paddingTop="10px"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="#0091BF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tv_Nombre5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_Nombre3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="Apellido Materno:"
+        android:textColor="#0091BF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/et_apellidoMat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.293"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_Nombre5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="Correo:"
+        android:textColor="#0091BF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/et_correo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.246"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/et_correo"
+        android:layout_width="239dp"
+        android:layout_height="38dp"
+
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/rounded_border_textview"
+        android:paddingLeft="10px"
+        android:paddingTop="10px"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="#0091BF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tv_Nombre6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/et_contra"
+        android:layout_width="239dp"
+        android:layout_height="38dp"
+
+        android:layout_marginBottom="168dp"
+        android:background="@drawable/rounded_border_textview"
+        android:inputType="textPassword"
+        android:paddingLeft="10px"
+        android:paddingTop="10px"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="#0091BF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_Nombre6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="Contraseña:"
+        android:textColor="#0091BF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/et_contra"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.266"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_Nombre4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Apellido Paterno:"
+        android:textColor="#0091BF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/et_ApellPat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgEncabezado"
+        android:layout_width="417dp"
+        android:layout_height="103dp"
+        android:padding="0px"
+        android:paddingTop="0px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/rectangle1"
+        tools:layout_editor_absoluteY="3dp" />
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="200dp"
+        android:layout_height="129dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgEncabezado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/logogrande" />
+
+    <TextView
+        android:id="@+id/tvClubs"
+        android:layout_width="200dp"
+        android:layout_height="99dp"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/roboto"
+        android:text="Bienvenido"
+        android:textColor="#03A9F4"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.44"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_nombre"
+        android:layout_width="239dp"
+        android:layout_height="38dp"
+
+        android:layout_marginBottom="36dp"
+        android:background="@drawable/rounded_border_textview"
+        android:inputType="text"
+        android:paddingLeft="10px"
+        android:paddingTop="10px"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="#0091BF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/et_ApellPat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_Nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Nombre:"
+        android:textColor="#0091BF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/et_nombre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.246"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+</android.support.constraint.ConstraintLayout>

@@ -8,6 +8,8 @@
         android:minSdkVersion="24"
         android:targetSdkVersion="29" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
@@ -19,6 +21,12 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.example.clubtime.SignUp" />
+        <activity android:name="com.example.clubtime.Inicio" />
+        <activity
+            android:name="com.example.clubtime.MenuInicio"
+            android:label="@string/title_activity_menu_inicio"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name="com.example.clubtime.Registrarse" />
         <activity android:name="com.example.clubtime.LogIn" >
             <intent-filter>
