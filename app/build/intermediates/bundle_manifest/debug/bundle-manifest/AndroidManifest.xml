@@ -21,8 +21,11 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.example.clubtime.UnirClub" />
+        <activity android:name="com.example.clubtime.CrearClub" />
+        <activity android:name="com.example.clubtime.InicioAdmni" />
         <activity android:name="com.example.clubtime.SignUp" />
-        <activity android:name="com.example.clubtime.Inicio" />
+        <activity android:name="com.example.clubtime.InicioAlumno" />
         <activity
             android:name="com.example.clubtime.MenuInicio"
             android:label="@string/title_activity_menu_inicio"

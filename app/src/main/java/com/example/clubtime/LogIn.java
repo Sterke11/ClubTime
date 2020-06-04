@@ -1,49 +1,14 @@
 package com.example.clubtime;
 
-import android.content.Context;
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.SpannableString;
 import android.text.style.UnderlineSpan;
-import android.util.Log;
 import android.view.View;
 import android.widget.*;
 
-import com.android.volley.AuthFailureError;
-import com.android.volley.NetworkError;
-import com.android.volley.NetworkResponse;
-import com.android.volley.NoConnectionError;
-import com.android.volley.ParseError;
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.ServerError;
-import com.android.volley.TimeoutError;
-import com.android.volley.VolleyError;
-import com.android.volley.VolleyLog;
-import com.android.volley.toolbox.HttpHeaderParser;
-import com.android.volley.toolbox.JsonArrayRequest;
-import com.android.volley.toolbox.Volley;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
-import java.lang.ref.WeakReference;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.net.URLEncoder;
-import java.nio.charset.StandardCharsets;
-import java.util.HashMap;
-import java.util.Map;
+import com.android.volley.*;
 
 public class LogIn extends AppCompatActivity implements View.OnClickListener{
 
@@ -54,6 +19,8 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener{
 
     RequestQueue requestQueue;
 
+    ConexionDB con;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,12 +28,11 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener{
 
         //Inicializar componentes de la actividad
         tvRegistrarse = (TextView) findViewById(R.id.tvRegistrarse);
-        tvResEmail =  findViewById(R.id.tvResEmail);
-        tvResPass =  findViewById(R.id.tvResPass);
+        tvResEmail =  findViewById(R.id.etEmail);
+        tvResPass =  findViewById(R.id.etPassword);
         btIniciarSesion =  findViewById(R.id.btIniciarSesion);
 
-
-
+        con = new ConexionDB();
 
         //Ocultar la barra de accion, por que queda feo jiji
         getSupportActionBar().hide();
@@ -80,7 +46,6 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener{
         tvRegistrarse.setOnClickListener(this);
 
         //Listener del boton de iniciar sesion (imagen: ->)
-
         btIniciarSesion.setOnClickListener(this);
     }
 
@@ -97,7 +62,7 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener{
             String pass=tvResPass.getText().toString();
 
 
-            JSONArray array=new JSONArray();
+            /*JSONArray array=new JSONArray();
             JSONObject obj=new JSONObject();
             try {
 
@@ -108,14 +73,15 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener{
             } catch (Exception e) {
                 e.printStackTrace();
             }
-            array.put(obj);
+            array.put(obj);*/
 
-            iniciarSesion("https://clubescom.000webhostapp.com/consultas.php?nombre="+nombre+"&pass="+pass+"&tipo=inicio");
+            con.iniciarSesion(nombre, pass, getApplicationContext());
             //prueba();
+
 
         }
     }
-
+/*
     private void iniciarSesion (String url){
 
         JSONArray data2=new JSONArray();
@@ -136,7 +102,7 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener{
                     Toast.makeText(getApplicationContext(),"error1",Toast.LENGTH_LONG).show();
                 }
                 if(!nombre.equals("none")){
-                        Intent intent = new Intent(getApplicationContext(),Inicio.class);
+                        Intent intent = new Intent(getApplicationContext(),InicioAlumno.class);
                         //String message = editText.getText().toString();
                         //intent.putExtra(EXTRA_MESSAGE, message);
                         startActivity(intent);
@@ -183,12 +149,8 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener{
                 }
             }
         });
-
-
         requestQueue= Volley.newRequestQueue(this);
         requestQueue.add(jsonArrayRequest);
-
-
     }
 
     /*public static class consultaUser extends AsyncTask<String,Void,String >{

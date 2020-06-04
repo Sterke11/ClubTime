@@ -6,64 +6,73 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="24"
-8-->C:\Users\erz_r\Documents\Erick\AndroidStudioProjects\ClubTime-master\app\src\main\AndroidManifest.xml
+8-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="29" />
-9-->C:\Users\erz_r\Documents\Erick\AndroidStudioProjects\ClubTime-master\app\src\main\AndroidManifest.xml
+9-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->C:\Users\erz_r\Documents\Erick\AndroidStudioProjects\ClubTime-master\app\src\main\AndroidManifest.xml:5:5-67
-11-->C:\Users\erz_r\Documents\Erick\AndroidStudioProjects\ClubTime-master\app\src\main\AndroidManifest.xml:5:22-64
+11-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:5:5-67
+11-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:5:22-64
 12
 13    <application
-13-->C:\Users\erz_r\Documents\Erick\AndroidStudioProjects\ClubTime-master\app\src\main\AndroidManifest.xml:7:5-28:19
+13-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:7:5-31:19
 14        android:allowBackup="true"
-14-->C:\Users\erz_r\Documents\Erick\AndroidStudioProjects\ClubTime-master\app\src\main\AndroidManifest.xml:8:9-35
+14-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:8:9-35
 15        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
-15-->[com.android.support:support-compat:28.0.0] C:\Users\erz_r\.gradle\caches\transforms-2\files-2.1\ccbd3881d3e597a650ace942161206f5\support-compat-28.0.0\AndroidManifest.xml:22:18-91
+15-->[com.android.support:support-compat:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\ccbd3881d3e597a650ace942161206f5\support-compat-28.0.0\AndroidManifest.xml:22:18-91
 16        android:debuggable="true"
 17        android:extractNativeLibs="false"
 18        android:icon="@mipmap/ic_launcher"
-18-->C:\Users\erz_r\Documents\Erick\AndroidStudioProjects\ClubTime-master\app\src\main\AndroidManifest.xml:9:9-43
+18-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:9:9-43
 19        android:label="@string/app_name"
-19-->C:\Users\erz_r\Documents\Erick\AndroidStudioProjects\ClubTime-master\app\src\main\AndroidManifest.xml:10:9-41
+19-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:10:9-41
 20        android:roundIcon="@mipmap/ic_launcher_round"
-20-->C:\Users\erz_r\Documents\Erick\AndroidStudioProjects\ClubTime-master\app\src\main\AndroidManifest.xml:11:9-54
+20-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:11:9-54
 21        android:supportsRtl="true"
-21-->C:\Users\erz_r\Documents\Erick\AndroidStudioProjects\ClubTime-master\app\src\main\AndroidManifest.xml:12:9-35
+21-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:12:9-35
 22        android:testOnly="true"
 23        android:theme="@style/AppTheme" >
-23-->C:\Users\erz_r\Documents\Erick\AndroidStudioProjects\ClubTime-master\app\src\main\AndroidManifest.xml:13:9-40
-24        <activity android:name="com.example.clubtime.SignUp" />
-24-->C:\Users\erz_r\Documents\Erick\AndroidStudioProjects\ClubTime-master\app\src\main\AndroidManifest.xml:14:9-53
-24-->C:\Users\erz_r\Documents\Erick\AndroidStudioProjects\ClubTime-master\app\src\main\AndroidManifest.xml:14:19-41
-25        <activity android:name="com.example.clubtime.Inicio" />
-25-->C:\Users\erz_r\Documents\Erick\AndroidStudioProjects\ClubTime-master\app\src\main\AndroidManifest.xml:15:9-44
-25-->C:\Users\erz_r\Documents\Erick\AndroidStudioProjects\ClubTime-master\app\src\main\AndroidManifest.xml:15:19-41
-26        <activity
-26-->C:\Users\erz_r\Documents\Erick\AndroidStudioProjects\ClubTime-master\app\src\main\AndroidManifest.xml:16:9-19:59
-27            android:name="com.example.clubtime.MenuInicio"
-27-->C:\Users\erz_r\Documents\Erick\AndroidStudioProjects\ClubTime-master\app\src\main\AndroidManifest.xml:17:13-39
-28            android:label="@string/title_activity_menu_inicio"
-28-->C:\Users\erz_r\Documents\Erick\AndroidStudioProjects\ClubTime-master\app\src\main\AndroidManifest.xml:18:13-63
-29            android:theme="@style/AppTheme.NoActionBar" />
-29-->C:\Users\erz_r\Documents\Erick\AndroidStudioProjects\ClubTime-master\app\src\main\AndroidManifest.xml:19:13-56
-30        <activity android:name="com.example.clubtime.Registrarse" />
-30-->C:\Users\erz_r\Documents\Erick\AndroidStudioProjects\ClubTime-master\app\src\main\AndroidManifest.xml:20:9-49
-30-->C:\Users\erz_r\Documents\Erick\AndroidStudioProjects\ClubTime-master\app\src\main\AndroidManifest.xml:20:19-46
-31        <activity android:name="com.example.clubtime.LogIn" >
-31-->C:\Users\erz_r\Documents\Erick\AndroidStudioProjects\ClubTime-master\app\src\main\AndroidManifest.xml:21:9-27:20
-31-->C:\Users\erz_r\Documents\Erick\AndroidStudioProjects\ClubTime-master\app\src\main\AndroidManifest.xml:21:19-40
-32            <intent-filter>
-32-->C:\Users\erz_r\Documents\Erick\AndroidStudioProjects\ClubTime-master\app\src\main\AndroidManifest.xml:22:13-26:29
-33                <action android:name="android.intent.action.MAIN" />
-33-->C:\Users\erz_r\Documents\Erick\AndroidStudioProjects\ClubTime-master\app\src\main\AndroidManifest.xml:23:17-69
-33-->C:\Users\erz_r\Documents\Erick\AndroidStudioProjects\ClubTime-master\app\src\main\AndroidManifest.xml:23:25-66
-34
-35                <category android:name="android.intent.category.LAUNCHER" />
-35-->C:\Users\erz_r\Documents\Erick\AndroidStudioProjects\ClubTime-master\app\src\main\AndroidManifest.xml:25:17-77
-35-->C:\Users\erz_r\Documents\Erick\AndroidStudioProjects\ClubTime-master\app\src\main\AndroidManifest.xml:25:27-74
-36            </intent-filter>
-37        </activity>
-38    </application>
-39
-40</manifest>
+23-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:13:9-40
+24        <activity android:name="com.example.clubtime.UnirClub" />
+24-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:14:9-55
+24-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:14:19-43
+25        <activity android:name="com.example.clubtime.CrearClub" />
+25-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:15:9-47
+25-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:15:19-44
+26        <activity android:name="com.example.clubtime.InicioAdmni" />
+26-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:16:9-49
+26-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:16:19-46
+27        <activity android:name="com.example.clubtime.SignUp" />
+27-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:17:9-44
+27-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:17:19-41
+28        <activity android:name="com.example.clubtime.InicioAlumno" />
+28-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:18:9-50
+28-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:18:19-47
+29        <activity
+29-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:19:9-22:59
+30            android:name="com.example.clubtime.MenuInicio"
+30-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:20:13-39
+31            android:label="@string/title_activity_menu_inicio"
+31-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:21:13-63
+32            android:theme="@style/AppTheme.NoActionBar" />
+32-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:22:13-56
+33        <activity android:name="com.example.clubtime.Registrarse" />
+33-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:23:9-49
+33-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:23:19-46
+34        <activity android:name="com.example.clubtime.LogIn" >
+34-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:24:9-30:20
+34-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:24:19-40
+35            <intent-filter>
+35-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:25:13-29:29
+36                <action android:name="android.intent.action.MAIN" />
+36-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:26:17-69
+36-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:26:25-66
+37
+38                <category android:name="android.intent.category.LAUNCHER" />
+38-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:28:17-77
+38-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:28:27-74
+39            </intent-filter>
+40        </activity>
+41    </application>
+42
+43</manifest>

@@ -1,138 +1,162 @@
 [
     {
-        "merged": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_campollenado.png.flat",
-        "source": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\src\\main\\res\\drawable\\campollenado.png"
+        "merged": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\build\\intermediates\\res\\merged\\debug\\navigation_nav_graph3.xml.flat",
+        "source": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\src\\main\\res\\navigation\\nav_graph3.xml"
     },
     {
-        "merged": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+        "merged": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\build\\intermediates\\res\\merged\\debug\\navigation_nav_graph3.xml.flat",
-        "source": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\src\\main\\res\\navigation\\nav_graph3.xml"
+        "merged": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\build\\intermediates\\res\\merged\\debug\\drawable_botonazulfuertea.png.flat",
+        "source": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\src\\main\\res\\drawable\\botonazulfuertea.png"
     },
     {
-        "merged": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+        "merged": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\build\\intermediates\\res\\merged\\debug\\font_roboto_thin.ttf.flat",
+        "source": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\src\\main\\res\\font\\roboto_thin.ttf"
     },
     {
-        "merged": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_menu_inicio.xml.flat",
-        "source": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\src\\main\\res\\layout\\activity_menu_inicio.xml"
+        "merged": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_inicio.xml.flat",
-        "source": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\src\\main\\res\\layout\\activity_inicio.xml"
+        "merged": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_flechaderecha.png.flat",
-        "source": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\src\\main\\res\\drawable\\flechaderecha.png"
+        "merged": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+        "merged": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\build\\intermediates\\res\\merged\\debug\\font_roboto.ttf.flat",
-        "source": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\src\\main\\res\\font\\roboto.ttf"
+        "merged": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\build\\intermediates\\res\\merged\\debug\\drawable_logogrande.png.flat",
+        "source": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\src\\main\\res\\drawable\\logogrande.png"
     },
     {
-        "merged": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
+        "merged": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_inicio_admni.xml.flat",
+        "source": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\src\\main\\res\\layout\\activity_inicio_admni.xml"
     },
     {
-        "merged": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_login.xml.flat",
-        "source": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\src\\main\\res\\layout\\activity_login.xml"
+        "merged": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\build\\intermediates\\res\\merged\\debug\\drawable_flechablancader.png.flat",
+        "source": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\src\\main\\res\\drawable\\flechablancader.png"
     },
     {
-        "merged": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+        "merged": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\build\\intermediates\\res\\merged\\debug\\drawable_campollenado.png.flat",
+        "source": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\src\\main\\res\\drawable\\campollenado.png"
     },
     {
-        "merged": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_logogrande.png.flat",
-        "source": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\src\\main\\res\\drawable\\logogrande.png"
+        "merged": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+        "merged": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
+        "source": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_rectangle1.png.flat",
-        "source": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\src\\main\\res\\drawable-v24\\rectangle1.png"
+        "merged": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\build\\intermediates\\res\\merged\\debug\\drawable_fechaazulizq.png.flat",
+        "source": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\src\\main\\res\\drawable\\fechaazulizq.png"
     },
     {
-        "merged": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_registrarse.xml.flat",
-        "source": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\src\\main\\res\\layout\\activity_registrarse.xml"
+        "merged": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_content_menu_inicio.xml.flat",
-        "source": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\src\\main\\res\\layout\\content_menu_inicio.xml"
+        "merged": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\build\\intermediates\\res\\merged\\debug\\layout_content_menu_inicio.xml.flat",
+        "source": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\src\\main\\res\\layout\\content_menu_inicio.xml"
     },
     {
-        "merged": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\build\\intermediates\\res\\merged\\debug\\font_roboto_thin.ttf.flat",
-        "source": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\src\\main\\res\\font\\roboto_thin.ttf"
+        "merged": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\build\\intermediates\\res\\merged\\debug\\drawable_rounded_border_textview.xml.flat",
+        "source": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\src\\main\\res\\drawable\\rounded_border_textview.xml"
     },
     {
-        "merged": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\build\\intermediates\\res\\merged\\debug\\navigation_nav_graph.xml.flat",
-        "source": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\src\\main\\res\\navigation\\nav_graph.xml"
+        "merged": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\build\\intermediates\\res\\merged\\debug\\drawable_rounded_border_textviewhite.xml.flat",
+        "source": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\src\\main\\res\\drawable\\rounded_border_textviewhite.xml"
     },
     {
-        "merged": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+        "merged": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_vector1.png.flat",
+        "source": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\src\\main\\res\\drawable-v24\\vector1.png"
     },
     {
-        "merged": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_vector1.png.flat",
-        "source": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\src\\main\\res\\drawable-v24\\vector1.png"
+        "merged": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+        "merged": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_sign_up.xml.flat",
+        "source": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\src\\main\\res\\layout\\activity_sign_up.xml"
     },
     {
-        "merged": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+        "merged": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\build\\intermediates\\res\\merged\\debug\\font_roboto.ttf.flat",
+        "source": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\src\\main\\res\\font\\roboto.ttf"
     },
     {
-        "merged": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\build\\intermediates\\res\\merged\\debug\\drawable_fondogrande.png.flat",
+        "source": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\src\\main\\res\\drawable\\fondogrande.png"
     },
     {
-        "merged": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_rounded_border_textview.xml.flat",
-        "source": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\src\\main\\res\\drawable\\rounded_border_textview.xml"
+        "merged": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\build\\intermediates\\res\\merged\\debug\\navigation_nav_graph2.xml.flat",
-        "source": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\src\\main\\res\\navigation\\nav_graph2.xml"
+        "merged": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_crear_club.xml.flat",
+        "source": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\src\\main\\res\\layout\\activity_crear_club.xml"
     },
     {
-        "merged": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+        "merged": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\build\\intermediates\\res\\merged\\debug\\navigation_nav_graph2.xml.flat",
+        "source": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\src\\main\\res\\navigation\\nav_graph2.xml"
     },
     {
-        "merged": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\src\\main\\res\\layout\\activity_main.xml"
+        "merged": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_registrarse.xml.flat",
+        "source": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\src\\main\\res\\layout\\activity_registrarse.xml"
     },
     {
-        "merged": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+        "merged": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_login.xml.flat",
+        "source": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\src\\main\\res\\layout\\activity_login.xml"
     },
     {
-        "merged": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_botonazulfuertea.png.flat",
-        "source": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\src\\main\\res\\drawable\\botonazulfuertea.png"
+        "merged": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_rectangle1.png.flat",
+        "source": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\src\\main\\res\\drawable-v24\\rectangle1.png"
     },
     {
-        "merged": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+        "merged": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_fondogrande.png.flat",
-        "source": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\src\\main\\res\\drawable\\fondogrande.png"
+        "merged": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_menu_inicio.xml.flat",
+        "source": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\src\\main\\res\\layout\\activity_menu_inicio.xml"
     },
     {
-        "merged": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_sign_up.xml.flat",
-        "source": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\src\\main\\res\\layout\\activity_sign_up.xml"
+        "merged": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_inicio_alumno.xml.flat",
+        "source": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\src\\main\\res\\layout\\activity_inicio_alumno.xml"
     },
     {
-        "merged": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\erz_r\\Documents\\Erick\\AndroidStudioProjects\\ClubTime-master\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\build\\intermediates\\res\\merged\\debug\\navigation_nav_graph.xml.flat",
+        "source": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\src\\main\\res\\navigation\\nav_graph.xml"
+    },
+    {
+        "merged": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\build\\intermediates\\res\\merged\\debug\\drawable_flechaazulder.png.flat",
+        "source": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\src\\main\\res\\drawable\\flechaazulder.png"
+    },
+    {
+        "merged": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_unir_club.xml.flat",
+        "source": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\src\\main\\res\\layout\\activity_unir_club.xml"
+    },
+    {
+        "merged": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
     }
 ]

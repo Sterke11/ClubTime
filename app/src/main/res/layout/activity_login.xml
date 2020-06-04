@@ -14,6 +14,7 @@
         android:src="@drawable/fondogrande"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
@@ -28,48 +29,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvEmail"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="75dp"
-        android:layout_marginTop="75dp"
-        android:layout_marginEnd="75dp"
-        android:fontFamily="@font/roboto"
-        android:text="Email Address:"
-        android:textColor="@color/Blanco"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Logo" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="75dp"
-        android:layout_marginTop="98dp"
-        android:layout_marginEnd="75dp"
-        android:src="@drawable/campollenado"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/Fondo"
-        app:layout_constraintTop_toBottomOf="@+id/Logo" />
-
-    <EditText
-        android:id="@+id/tvResEmail"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="105dp"
-        android:layout_marginEnd="80dp"
-        android:inputType="textEmailAddress"
-        android:textColor="@color/colorPrimary"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Logo" />
-
-    <TextView
         android:id="@+id/tvPass"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -80,38 +39,70 @@
         android:text="Password:"
         android:textColor="@color/Blanco"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Logo"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintBottom_toTopOf="@id/etPassword"/>
 
-    <ImageView
-        android:id="@+id/imageView"
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+
+        android:layout_marginStart="75dp"
+        android:layout_marginEnd="75dp"
+        android:background="@drawable/rounded_border_textviewhite"
+        android:inputType="textPassword"
+        android:paddingStart="5dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="5dp"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="#0091BF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/Fondo"
+        app:layout_constraintTop_toBottomOf="@+id/tvPass" />
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+
+        android:layout_marginStart="75dp"
+        android:layout_marginEnd="75dp"
+        android:layout_marginBottom="36dp"
+        android:background="@drawable/rounded_border_textviewhite"
+        android:inputType="textEmailAddress"
+        android:paddingStart="5dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="5dp"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="#0091BF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvPass"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEmail" />
+
+    <TextView
+        android:id="@+id/tvEmail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="75dp"
-        android:layout_marginTop="188dp"
+        android:layout_marginTop="75dp"
         android:layout_marginEnd="75dp"
-        android:src="@drawable/campollenado"
+        android:fontFamily="@font/roboto"
+        android:text="Email Address:"
+        android:textColor="@color/Blanco"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/etEmail"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/Fondo"
-        app:layout_constraintTop_toBottomOf="@+id/Logo" />
-
-    <EditText
-        android:id="@+id/tvResPass"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="195dp"
-        android:layout_marginEnd="80dp"
-        android:inputType="textPassword"
-        android:textColor="@color/colorPrimary"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Logo" />
 
@@ -132,9 +123,9 @@
 
     <Button
         android:id="@+id/btIniciarSesion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/flechaderecha"
+        android:layout_width="67dp"
+        android:layout_height="47dp"
+        android:background="@drawable/flechablancader"
         android:shadowColor="#00FFFFFF"
         android:text=""
         android:visibility="visible"
@@ -142,7 +133,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/etPassword" />
 
 
 </android.support.constraint.ConstraintLayout>
