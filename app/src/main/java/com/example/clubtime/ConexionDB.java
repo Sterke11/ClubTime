@@ -2,6 +2,10 @@ package com.example.clubtime;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Parcelable;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.view.View;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -16,18 +20,25 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
 
+import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.concurrent.ExecutionException;
 
 public class ConexionDB implements Response.ErrorListener {
 
     Context context;
+    Usuario usuario;
+    Club club;
 
     public void iniciarSesion (String nombre, String pass, final Context context){
         String url = "https://clubescom.000webhostapp.com/consultas.php?nombre="+nombre+"&pass="+pass+"&tipo=inicio";
         this.context = context;
+
+        usuario = new Usuario();
 
         JSONArray data2=new JSONArray();
         RequestQueue requestQueue;
@@ -36,30 +47,46 @@ public class ConexionDB implements Response.ErrorListener {
                 @Override
                 public void onResponse(JSONArray response) {
                     JSONObject jsonObject = null;
-                    String nombre = null;
-
                     try {
                         jsonObject = response.getJSONObject(0);
-                        nombre = jsonObject.getString("nombre_usuario");
 
+                        //PASAR DATOS AL OBJETO USUARIO, FAVOR DE CONSULTAR EL SEGUNDO METODO DE LA CLASE ConexionDB
+                        usuario = new Usuario(jsonObject);
 
+                        if (!usuario.getNombre().equals("none")) {
+                            if (usuario.getTipo() == 1){
+                                Intent intent = new Intent(context, InicioAdmni.class);
+                                //Toast.makeText(context, "none", Toast.LENGTH_LONG).show();
+                                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                                //Crear la variable global del usuario activo
+                                //GlobalClass gc= (GlobalClass)  context;
+                                //gc.setActive_user(nombre);
+                                intent.putExtra("usuario", usuario);
+                                context.startActivity(intent);
+                            }
+                            else{
+                                Intent intent = new Intent(context, InicioAlumno.class);
+                                //Toast.makeText(context, "none", Toast.LENGTH_LONG).show();
+                                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                                //Crear la variable global del usuario activo
+                                //GlobalClass gc= (GlobalClass)  context;
+                                //gc.setActive_user(nombre);
+                                context.startActivity(intent);
+
+                            }
+                        } else {
+                            Toast.makeText(context, "El usuario o contraseña es erroneo", Toast.LENGTH_LONG).show();
+                        }
                     } catch (Exception e) {
                         e.printStackTrace();
                         Toast.makeText(context, "error1", Toast.LENGTH_LONG).show();
-                    }
-                    if (!nombre.equals("none")) {
-                        Intent intent = new Intent(context, InicioAlumno.class);
-                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                        context.startActivity(intent);
-                    } else {
-                        Toast.makeText(context, "El usuario o contraseña es erroneo", Toast.LENGTH_LONG).show();
                     }
 
                 }
             }, this);
 
             requestQueue = Volley.newRequestQueue(context);
-            Toast.makeText(context, "Todo bien", Toast.LENGTH_LONG).show();
+
             requestQueue.add(jsonArrayRequest);
         }
         catch (Exception e){
@@ -67,9 +94,9 @@ public class ConexionDB implements Response.ErrorListener {
         }
     }
 
-    public void registrarUser(String nombre, String pass, String apellido_paterno, String apellido_materno, String correo, final Context context){
+    public void registrarUser(String nombre, String pass, String apellido_paterno, String apellido_materno, String correo, String boleta, final Context context){
 
-        String url = "https://clubescom.000webhostapp.com/consultas.php?nombre="+nombre+"&pass="+pass+"&tipo=registro"+"&apellido_mat="+apellido_materno+"&apellido_pat="+apellido_paterno+"&correo="+correo;
+        String url = "https://clubescom.000webhostapp.com/consultas.php?nombre="+nombre+"&pass="+pass+"&tipo=registro"+"&apellido_mat="+apellido_materno+"&apellido_pat="+apellido_paterno+"&correo="+correo+"&boleta="+boleta;
         this.context = context;
 
         JSONArray data2=new JSONArray();
@@ -83,7 +110,7 @@ public class ConexionDB implements Response.ErrorListener {
 
                 try {
                     jsonObject = response.getJSONObject(0);
-                    nombre=jsonObject.getString("nombre_usuario");
+                    nombre=jsonObject.getString("respuesta");
 
 
                 } catch (Exception e) {
@@ -111,8 +138,127 @@ public class ConexionDB implements Response.ErrorListener {
         requestQueue.add(jsonArrayRequest);
     }
 
+    public void crearClub(String nombre, String pass , String idClub, final Context context){
+
+        //GlobalClass gc= (GlobalClass) context;
+        String active_user= usuario.getNombreUser();
+
+        String url = "https://clubescom.000webhostapp.com/consultas.php?nombre="+nombre+"&pass="+pass+"&tipo=crearClub"+"&alias_club="+idClub+"&user_alta="+active_user;
+        this.context = context;
+
+        JSONArray data2=new JSONArray();
+        RequestQueue requestQueue;
+
+        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(url, new Response.Listener<JSONArray>() {
+            @Override
+            public void onResponse(JSONArray response) {
+                JSONObject jsonObject = null;
+                String resp = "";
+
+                try {
+                    jsonObject = response.getJSONObject(0);
+                    resp=jsonObject.getString("respuesta");
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    Toast.makeText(context,"error1",Toast.LENGTH_LONG).show();
+                }
+                if(resp.equals("registrado")){
+                    Toast.makeText(context,"Registro Exitoso",Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(context,InicioAdmni.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+                    //String message = editText.getText().toString();
+                    //intent.putExtra(EXTRA_MESSAGE, message);
+                    context.startActivity(intent);
+
+                }else if(resp.equals("existente")){
+                    Toast.makeText(context,"El ID del club ya esta registrado",Toast.LENGTH_LONG).show();
+                }
+                else{
+                    Toast.makeText(context,"Error al registrar club"+resp,Toast.LENGTH_LONG).show();
+                }
+
+            }
+        }, this);
+        requestQueue= Volley.newRequestQueue(context);
+        requestQueue.add(jsonArrayRequest);
+    }
+
+    public void getClubs(@NotNull Usuario usuario, final RecyclerView rvClubs, final Context context){
+
+        //GlobalClass gc=new GlobalClass();
+        this.usuario = usuario;
+        String NomUsuario = usuario.getNombreUser();
+        String url = "https://clubescom.000webhostapp.com/consultas.php?Nombre="+NomUsuario+"&tipo=getClubs";
+        this.context = context;
+
+        JSONArray data2=new JSONArray();
+        RequestQueue requestQueue;
+        try {
+            JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(url, new Response.Listener<JSONArray>() {
+                @Override
+                public void onResponse(JSONArray response) {
+                    JSONObject jsonObject = null;
+                    //String resp = null;
+                    //ArrayList<ClubsVo> list=null;
+                    ArrayList<Club> list=null;
+                    ClubsVo clubsVo=null;
+                    AdapterData adapter=null;
+
+                    try {
+                        jsonObject = response.getJSONObject(0);
+
+                        club = new Club(jsonObject);
+
+                        //resp = jsonObject.getString("nombre_club");
+
+                        if (!club.getNombre().equals("none")) {
+                            Utilidades.status=1;
+
+                            rvClubs.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false));
+                            //list=new ArrayList<ClubsVo>();
+                            list = new ArrayList<Club>();
+                            for(int i=0;i<response.length();i++){
+                                jsonObject=response.getJSONObject(i);
+                                //clubsVo=new ClubsVo(jsonObject.getString("nombre_club"),"Horario de "+jsonObject.getString("hora_entrada")+"a"+jsonObject.getString("hora_salida"),i);
+                                club = new Club(jsonObject);
+                                list.add(club);
+                            }
+                            adapter = new AdapterData(list);
+                            final ArrayList<Club> finalList = list;
+                            adapter.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    Toast.makeText(context,"Usted ha seleccionado "+ finalList.get(rvClubs.getChildAdapterPosition(v)).getNombre(),Toast.LENGTH_LONG).show();
+                                }
+                            });
+                            rvClubs.setAdapter(adapter);
+
+                        } else {
+                            Utilidades.status=0;
+                            rvClubs.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false));
+                            list=new ArrayList<Club>();
+                            Toast.makeText(context, "El usuario o contraseña es erroneo", Toast.LENGTH_LONG).show();
+                        }
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                        Toast.makeText(context, "error1", Toast.LENGTH_LONG).show();
+                    }
+
+                }
+            }, this);
+
+            requestQueue = Volley.newRequestQueue(context);
+
+            requestQueue.add(jsonArrayRequest);
+        }
+        catch (Exception e){
+            Toast.makeText(context, "No jalo " + e.toString(), Toast.LENGTH_LONG).show();
+        }
+    }
+
     @Override
-    public void onErrorResponse(VolleyError error) {
+    public void onErrorResponse(@NotNull VolleyError error) {
         error.printStackTrace();
         if (error instanceof TimeoutError)  {
             Toast.makeText(context,

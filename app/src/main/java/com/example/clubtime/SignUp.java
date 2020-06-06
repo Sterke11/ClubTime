@@ -54,8 +54,10 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener, T
     EditText et_apellMat;
     EditText et_ResEmail;
     EditText et_ResPass;
-    Button btRegitrar;
-    RequestQueue requestQueue;
+    EditText et_boleta;
+    Button btRegistrar;
+    CheckBox chbAlumno;
+    CheckBox chbAdministrador;
 
     ConexionDB conexionDB;
 
@@ -65,27 +67,32 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener, T
         setContentView(R.layout.activity_sign_up);
 
         //Inicializar componentes de la actividad
-        et_Nombre =  findViewById(R.id.et_nombre);
-        et_apellPat =  findViewById(R.id.et_ApellPat);
-        et_apellMat =  findViewById(R.id.et_apellidoMat);
-        et_ResEmail =  findViewById(R.id.et_correo);
-        et_ResPass =  findViewById(R.id.et_contra);
-        btRegitrar =  findViewById(R.id.bt_Registra);
+        et_Nombre = findViewById(R.id.et_nombre);
+        et_apellPat = findViewById(R.id.et_ApellPat);
+        et_apellMat = findViewById(R.id.et_apellidoMat);
+        et_ResEmail = findViewById(R.id.et_correo);
+        et_ResPass = findViewById(R.id.et_contra);
+        et_boleta = findViewById(R.id.et_boleta);
+        btRegistrar = findViewById(R.id.bt_Registra);
+        chbAlumno = findViewById(R.id.chbAlumno);
+        chbAdministrador = findViewById(R.id.chbAdministrador);
 
-        et_Nombre.addTextChangedListener(this);
+        et_Nombre  .addTextChangedListener(this);
         et_apellMat.addTextChangedListener(this);
         et_apellPat.addTextChangedListener(this);
         et_ResEmail.addTextChangedListener(this);
-        et_ResPass.addTextChangedListener(this);
+        et_ResPass .addTextChangedListener(this);
+        et_boleta  .addTextChangedListener(this);
 
         conexionDB = new ConexionDB();
-
 
         //Ocultar la barra de accion, por que queda feo jiji
         getSupportActionBar().hide();
 
         //Agregar accion al oprimir "Registrar"
-        btRegitrar.setOnClickListener(this);
+        btRegistrar     .setOnClickListener(this);
+        chbAlumno       .setOnClickListener(this);
+        chbAdministrador.setOnClickListener(this);
 
     }
     @Override
@@ -94,6 +101,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener, T
         if (!et_apellMat.equals(""))         et_apellMat.getBackground().setColorFilter(Color.parseColor("#FFB8DDED"), PorterDuff.Mode.SRC_ATOP);
         if (!et_apellPat.equals(""))         et_apellPat.getBackground().setColorFilter(Color.parseColor("#FFB8DDED"), PorterDuff.Mode.SRC_ATOP);
         if (!et_ResEmail.equals(""))         et_ResEmail.getBackground().setColorFilter(Color.parseColor("#FFB8DDED"), PorterDuff.Mode.SRC_ATOP);
+        if (!et_boleta.equals(""))           et_boleta  .getBackground().setColorFilter(Color.parseColor("#FFB8DDED"), PorterDuff.Mode.SRC_ATOP);
         if (et_ResPass.getText().length()>6) et_ResPass .getBackground().setColorFilter(Color.parseColor("#FFB8DDED"), PorterDuff.Mode.SRC_ATOP);
     }
 
@@ -106,19 +114,27 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener, T
             String apellido_materno=et_apellMat.getText().toString();
             String correo=et_ResEmail.getText().toString();
             String pass=et_ResPass.getText().toString();
+            String boleta=et_boleta.getText().toString();
 
-            if(nombre.equals("") || apellido_paterno.equals("")|| apellido_materno.equals("") || correo.equals("")){
+            if(nombre.equals("") || apellido_paterno.equals("")|| apellido_materno.equals("") || correo.equals("") || boleta.equals("") ||
+                    pass.equals("") || (!chbAlumno.isChecked() && !chbAdministrador.isChecked())){
                 if(nombre.equals(""))           et_Nombre  .getBackground().setColorFilter(Color.parseColor("#7f7f7f"), PorterDuff.Mode.DARKEN);
                 if(apellido_materno.equals("")) et_apellMat.getBackground().setColorFilter(Color.parseColor("#7f7f7f"), PorterDuff.Mode.DARKEN);
                 if(apellido_paterno.equals("")) et_apellPat.getBackground().setColorFilter(Color.parseColor("#7f7f7f"), PorterDuff.Mode.DARKEN);
                 if(nombre.equals(""))           et_ResEmail.getBackground().setColorFilter(Color.parseColor("#7f7f7f"), PorterDuff.Mode.DARKEN);
+                if(boleta.equals(""))           et_boleta  .getBackground().setColorFilter(Color.parseColor("#7f7f7f"), PorterDuff.Mode.DARKEN);
+                if(pass.equals(""))             et_ResPass .getBackground().setColorFilter(Color.parseColor("#7f7f7f"), PorterDuff.Mode.DARKEN);
+                if(!chbAlumno.isChecked() && !chbAdministrador.isChecked()){
+                    chbAlumno       .getBackground().setColorFilter(Color.parseColor("#7f7f7f"), PorterDuff.Mode.DARKEN);
+                    chbAdministrador.getBackground().setColorFilter(Color.parseColor("#7f7f7f"), PorterDuff.Mode.DARKEN);
+                }
                 Toast.makeText(getApplicationContext(),"Los campos no pueden estar vacios",Toast.LENGTH_LONG).show();
             }else if(pass.length()<7){
                 Toast.makeText(getApplicationContext(),"La contraseña debe ser minimo de 7 caracteres",Toast.LENGTH_LONG).show();
                 et_ResPass.getBackground().setColorFilter(Color.parseColor("#7f7f7f"), PorterDuff.Mode.DARKEN);
 
             }else {
-                conexionDB.registrarUser(nombre, pass, apellido_paterno, apellido_materno, correo, getApplicationContext());
+                conexionDB.registrarUser(nombre, pass, apellido_paterno, apellido_materno, correo,boleta, getApplicationContext());
                 //registrarUser("https://clubescom.000webhostapp.com/consultas.php?nombre="+nombre+"&pass="+pass+"&tipo=registro"+"&apellido_mat="+apellido_materno+"&apellido_pat="+apellido_paterno+"&correo="+correo);
 
             }
@@ -129,7 +145,16 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener, T
             //prueba();
 
         }
-
+        if(v.getId() == R.id.chbAlumno){
+            chbAdministrador.setChecked(false);
+            chbAdministrador.getBackground().setColorFilter(Color.parseColor("#FFFFFF"), PorterDuff.Mode.SRC_ATOP);
+            chbAlumno       .getBackground().setColorFilter(Color.parseColor("#FFFFFF"), PorterDuff.Mode.SRC_ATOP);
+        }
+        if(v.getId() == R.id.chbAdministrador){
+            chbAlumno       .setChecked(false);
+            chbAlumno       .getBackground().setColorFilter(Color.parseColor("#FFFFFF"), PorterDuff.Mode.SRC_ATOP);
+            chbAdministrador.getBackground().setColorFilter(Color.parseColor("#FFFFFF"), PorterDuff.Mode.SRC_ATOP);
+        }
 
     }
 

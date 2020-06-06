@@ -1,23 +1,26 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:2:1-33:12
+ADDED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml:2:1-34:12
 MERGED from [android.arch.navigation:navigation-ui:1.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\32e55843613d94a5c0ffebc2c099be5d\navigation-ui-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:design:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\019500ed5e5dadc1e5817340a04317fe\design-28.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\0c91d46fdd28334f30b1556655513aca\appcompat-v7-28.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\6aa08304add994e185ee5bd49f0fc102\constraint-layout-1.1.3\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\3f2e451f3d4a22dd12f5269cec6e5975\recyclerview-v7-28.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.navigation:navigation-fragment:1.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\2df68a89c03dde9a47a33310c1d8dd8b\navigation-fragment-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-v4:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\84cb7de5e4536d78a1dfce4d3b2ae7d2\support-v4-28.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\280574ab331d6899a7e8badab855b8e7\extensions-1.1.1\AndroidManifest.xml:17:1-30:12
 MERGED from [com.android.volley:volley:1.1.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\de8d60ade6ed7e2ae2232cd435f6679e\volley-1.1.0\AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\c88c593eadb3214baf9beaf10235fc22\support-fragment-28.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\19441647dde82811e0f8850f322a3735\animated-vector-drawable-28.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\3f2e451f3d4a22dd12f5269cec6e5975\recyclerview-v7-28.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\4befd111260781b0887d9350daa1408f\support-core-ui-28.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.navigation:navigation-runtime:1.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\53ba2b4354c71ec3d73e46736ef05298\navigation-runtime-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\b71e3287f1352736da0fec142f5211bc\support-core-utils-28.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\1562b3719554fa4903e28dcd9508f1e8\support-vector-drawable-28.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:transition:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\739a92f2ac7bee66cba6e1d42d9d99f8\transition-28.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\557db7c73cb6ea7b75c71195a4d80729\support-media-compat-28.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:loader:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\1960372ea23d13d4be6b794726d2c6fe\loader-28.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:viewpager:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\79c2c073fb018aa76bf35cb91e185267\viewpager-28.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\02032d4eab5e547a1b10f7e2cc64a621\coordinatorlayout-28.0.0\AndroidManifest.xml:17:1-22:12
@@ -32,41 +35,43 @@ MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\dacov\.gra
 MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\8ea6ac34f223929050e42d0d41b55557\cursoradapter-28.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\287b81395e8a6af72b16997b2b264ea9\cardview-v7-28.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\97d9e80cc06bd1716c9a1c83dcdf0e1a\runtime-1.1.1\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:documentfile:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\4008b816f163fba5a2697c0a5560c682\documentfile-28.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\e3c4d05a27bf4f4552df5090537133ea\localbroadcastmanager-28.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:print:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\326b07dc58f3196235573cd7c3eaefad\print-28.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\0bff491a10253e576df70f25d663fdb9\viewmodel-1.1.1\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:interpolator:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\7312172b974aad26593142162affd51c\interpolator-28.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\6920a4ecf0c2443f01cbd9424474ed41\livedata-1.1.1\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\aa31b21d37fa785af8be2696040c0070\livedata-core-1.1.1\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.1] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\3cdd09ad7aea26e45644d6466a6ff4d1\runtime-1.1.1\AndroidManifest.xml:17:1-22:12
-INJECTED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:2:1-33:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\0bff491a10253e576df70f25d663fdb9\viewmodel-1.1.1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\4008b816f163fba5a2697c0a5560c682\documentfile-28.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\e3c4d05a27bf4f4552df5090537133ea\localbroadcastmanager-28.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\326b07dc58f3196235573cd7c3eaefad\print-28.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\7312172b974aad26593142162affd51c\interpolator-28.0.0\AndroidManifest.xml:17:1-22:12
+INJECTED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml:2:1-34:12
 	package
-		ADDED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:3:5-35
-		INJECTED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml
-		INJECTED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml:3:5-35
+		INJECTED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml
-		ADDED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:2:1-33:12
-		INJECTED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml:2:1-34:12
+		INJECTED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml
-		ADDED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:2:1-33:12
-		INJECTED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml:2:1-34:12
+		INJECTED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.INTERNET
-ADDED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:5:5-67
+ADDED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml:5:5-67
 	android:name
-		ADDED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:5:22-64
+		ADDED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml:5:22-64
 application
-ADDED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:7:5-31:19
+ADDED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml:7:5-32:19
 MERGED from [com.android.support:design:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\019500ed5e5dadc1e5817340a04317fe\design-28.0.0\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:design:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\019500ed5e5dadc1e5817340a04317fe\design-28.0.0\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\6aa08304add994e185ee5bd49f0fc102\constraint-layout-1.1.3\AndroidManifest.xml:9:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\6aa08304add994e185ee5bd49f0fc102\constraint-layout-1.1.3\AndroidManifest.xml:9:5-20
+MERGED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\280574ab331d6899a7e8badab855b8e7\extensions-1.1.1\AndroidManifest.xml:22:5-28:19
+MERGED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\280574ab331d6899a7e8badab855b8e7\extensions-1.1.1\AndroidManifest.xml:22:5-28:19
 MERGED from [com.android.volley:volley:1.1.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\de8d60ade6ed7e2ae2232cd435f6679e\volley-1.1.0\AndroidManifest.xml:9:5-20
 MERGED from [com.android.volley:volley:1.1.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\de8d60ade6ed7e2ae2232cd435f6679e\volley-1.1.0\AndroidManifest.xml:9:5-20
 MERGED from [com.android.support:support-compat:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\ccbd3881d3e597a650ace942161206f5\support-compat-28.0.0\AndroidManifest.xml:22:5-94
@@ -76,67 +81,65 @@ MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\dacov\.gra
 	android:appComponentFactory
 		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\ccbd3881d3e597a650ace942161206f5\support-compat-28.0.0\AndroidManifest.xml:22:18-91
 	android:supportsRtl
-		ADDED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:12:9-35
+		ADDED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml:12:9-35
 	android:label
-		ADDED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:10:9-41
+		ADDED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml:10:9-41
 	android:roundIcon
-		ADDED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:11:9-54
+		ADDED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml:11:9-54
 	android:icon
-		ADDED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:9:9-43
+		ADDED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml:9:9-43
 	android:allowBackup
-		ADDED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:8:9-35
+		ADDED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml:8:9-35
 	android:theme
-		ADDED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:13:9-40
+		ADDED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml:13:9-40
+	android:name
+		ADDED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml:14:9-36
 activity#com.example.clubtime.UnirClub
-ADDED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:14:9-55
+ADDED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml:16:9-46
 	android:name
-		ADDED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:14:19-43
+		ADDED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml:16:19-43
 activity#com.example.clubtime.CrearClub
-ADDED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:15:9-47
+ADDED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml:17:9-47
 	android:name
-		ADDED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:15:19-44
+		ADDED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml:17:19-44
 activity#com.example.clubtime.InicioAdmni
-ADDED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:16:9-49
+ADDED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml:18:9-49
 	android:name
-		ADDED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:16:19-46
+		ADDED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml:18:19-46
 activity#com.example.clubtime.SignUp
-ADDED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:17:9-44
+ADDED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml:19:9-44
 	android:name
-		ADDED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:17:19-41
+		ADDED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml:19:19-41
 activity#com.example.clubtime.InicioAlumno
-ADDED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:18:9-50
+ADDED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml:20:9-50
 	android:name
-		ADDED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:18:19-47
+		ADDED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml:20:19-47
 activity#com.example.clubtime.MenuInicio
-ADDED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:19:9-22:59
+ADDED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml:21:9-24:59
 	android:label
-		ADDED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:21:13-63
+		ADDED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml:23:13-63
 	android:theme
-		ADDED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:22:13-56
+		ADDED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml:24:13-56
 	android:name
-		ADDED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:20:13-39
-activity#com.example.clubtime.Registrarse
-ADDED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:23:9-49
-	android:name
-		ADDED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:23:19-46
+		ADDED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml:22:13-39
 activity#com.example.clubtime.LogIn
-ADDED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:24:9-30:20
+ADDED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml:25:9-31:20
 	android:name
-		ADDED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:24:19-40
+		ADDED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml:25:19-40
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:25:13-29:29
+ADDED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml:26:13-30:29
 action#android.intent.action.MAIN
-ADDED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:26:17-69
+ADDED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml:27:17-69
 	android:name
-		ADDED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:26:25-66
+		ADDED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml:27:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:28:17-77
+ADDED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml:29:17-77
 	android:name
-		ADDED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:28:27-74
+		ADDED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml:29:27-74
 uses-sdk
-INJECTED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml
-INJECTED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml
 MERGED from [android.arch.navigation:navigation-ui:1.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\32e55843613d94a5c0ffebc2c099be5d\navigation-ui-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.navigation:navigation-ui:1.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\32e55843613d94a5c0ffebc2c099be5d\navigation-ui-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:design:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\019500ed5e5dadc1e5817340a04317fe\design-28.0.0\AndroidManifest.xml:20:5-44
@@ -145,16 +148,20 @@ MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\dacov\.gradle\cac
 MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\0c91d46fdd28334f30b1556655513aca\appcompat-v7-28.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\6aa08304add994e185ee5bd49f0fc102\constraint-layout-1.1.3\AndroidManifest.xml:5:5-7:41
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\6aa08304add994e185ee5bd49f0fc102\constraint-layout-1.1.3\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\3f2e451f3d4a22dd12f5269cec6e5975\recyclerview-v7-28.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\3f2e451f3d4a22dd12f5269cec6e5975\recyclerview-v7-28.0.0\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.navigation:navigation-fragment:1.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\2df68a89c03dde9a47a33310c1d8dd8b\navigation-fragment-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.navigation:navigation-fragment:1.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\2df68a89c03dde9a47a33310c1d8dd8b\navigation-fragment-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\84cb7de5e4536d78a1dfce4d3b2ae7d2\support-v4-28.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\84cb7de5e4536d78a1dfce4d3b2ae7d2\support-v4-28.0.0\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\280574ab331d6899a7e8badab855b8e7\extensions-1.1.1\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\280574ab331d6899a7e8badab855b8e7\extensions-1.1.1\AndroidManifest.xml:20:5-44
 MERGED from [com.android.volley:volley:1.1.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\de8d60ade6ed7e2ae2232cd435f6679e\volley-1.1.0\AndroidManifest.xml:7:5-43
 MERGED from [com.android.volley:volley:1.1.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\de8d60ade6ed7e2ae2232cd435f6679e\volley-1.1.0\AndroidManifest.xml:7:5-43
 MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\c88c593eadb3214baf9beaf10235fc22\support-fragment-28.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\c88c593eadb3214baf9beaf10235fc22\support-fragment-28.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\19441647dde82811e0f8850f322a3735\animated-vector-drawable-28.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\19441647dde82811e0f8850f322a3735\animated-vector-drawable-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\3f2e451f3d4a22dd12f5269cec6e5975\recyclerview-v7-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\3f2e451f3d4a22dd12f5269cec6e5975\recyclerview-v7-28.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\4befd111260781b0887d9350daa1408f\support-core-ui-28.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\4befd111260781b0887d9350daa1408f\support-core-ui-28.0.0\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.navigation:navigation-runtime:1.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\53ba2b4354c71ec3d73e46736ef05298\navigation-runtime-1.0.0\AndroidManifest.xml:20:5-44
@@ -165,6 +172,8 @@ MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\dacov\
 MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\1562b3719554fa4903e28dcd9508f1e8\support-vector-drawable-28.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:transition:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\739a92f2ac7bee66cba6e1d42d9d99f8\transition-28.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:transition:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\739a92f2ac7bee66cba6e1d42d9d99f8\transition-28.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\557db7c73cb6ea7b75c71195a4d80729\support-media-compat-28.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\557db7c73cb6ea7b75c71195a4d80729\support-media-compat-28.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:loader:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\1960372ea23d13d4be6b794726d2c6fe\loader-28.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:loader:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\1960372ea23d13d4be6b794726d2c6fe\loader-28.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:viewpager:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\79c2c073fb018aa76bf35cb91e185267\viewpager-28.0.0\AndroidManifest.xml:20:5-44
@@ -193,29 +202,39 @@ MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\dacov\.gradle\cach
 MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\287b81395e8a6af72b16997b2b264ea9\cardview-v7-28.0.0\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\97d9e80cc06bd1716c9a1c83dcdf0e1a\runtime-1.1.1\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\97d9e80cc06bd1716c9a1c83dcdf0e1a\runtime-1.1.1\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:documentfile:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\4008b816f163fba5a2697c0a5560c682\documentfile-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:documentfile:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\4008b816f163fba5a2697c0a5560c682\documentfile-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\e3c4d05a27bf4f4552df5090537133ea\localbroadcastmanager-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\e3c4d05a27bf4f4552df5090537133ea\localbroadcastmanager-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:print:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\326b07dc58f3196235573cd7c3eaefad\print-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:print:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\326b07dc58f3196235573cd7c3eaefad\print-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\0bff491a10253e576df70f25d663fdb9\viewmodel-1.1.1\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\0bff491a10253e576df70f25d663fdb9\viewmodel-1.1.1\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\7312172b974aad26593142162affd51c\interpolator-28.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\7312172b974aad26593142162affd51c\interpolator-28.0.0\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\6920a4ecf0c2443f01cbd9424474ed41\livedata-1.1.1\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\6920a4ecf0c2443f01cbd9424474ed41\livedata-1.1.1\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\aa31b21d37fa785af8be2696040c0070\livedata-core-1.1.1\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\aa31b21d37fa785af8be2696040c0070\livedata-core-1.1.1\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.core:runtime:1.1.1] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\3cdd09ad7aea26e45644d6466a6ff4d1\runtime-1.1.1\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.core:runtime:1.1.1] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\3cdd09ad7aea26e45644d6466a6ff4d1\runtime-1.1.1\AndroidManifest.xml:20:5-44
-INJECTED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml
-INJECTED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\0bff491a10253e576df70f25d663fdb9\viewmodel-1.1.1\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\0bff491a10253e576df70f25d663fdb9\viewmodel-1.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\4008b816f163fba5a2697c0a5560c682\documentfile-28.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\4008b816f163fba5a2697c0a5560c682\documentfile-28.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\e3c4d05a27bf4f4552df5090537133ea\localbroadcastmanager-28.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\e3c4d05a27bf4f4552df5090537133ea\localbroadcastmanager-28.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\326b07dc58f3196235573cd7c3eaefad\print-28.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\326b07dc58f3196235573cd7c3eaefad\print-28.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\7312172b974aad26593142162affd51c\interpolator-28.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\7312172b974aad26593142162affd51c\interpolator-28.0.0\AndroidManifest.xml:20:5-44
+INJECTED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml
-		ADDED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml
-		INJECTED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml
-		ADDED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml
-		INJECTED from D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\dacov\Downloads\ClubTime-master (2)\ClubTime-master\app\src\main\AndroidManifest.xml
+provider#android.arch.lifecycle.ProcessLifecycleOwnerInitializer
+ADDED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\280574ab331d6899a7e8badab855b8e7\extensions-1.1.1\AndroidManifest.xml:23:9-27:43
+	android:authorities
+		ADDED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\280574ab331d6899a7e8badab855b8e7\extensions-1.1.1\AndroidManifest.xml:25:13-68
+	android:multiprocess
+		ADDED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\280574ab331d6899a7e8badab855b8e7\extensions-1.1.1\AndroidManifest.xml:27:13-40
+	android:exported
+		ADDED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\280574ab331d6899a7e8badab855b8e7\extensions-1.1.1\AndroidManifest.xml:26:13-37
+	android:name
+		ADDED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\280574ab331d6899a7e8badab855b8e7\extensions-1.1.1\AndroidManifest.xml:24:13-83

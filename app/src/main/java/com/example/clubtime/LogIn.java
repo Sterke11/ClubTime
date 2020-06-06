@@ -19,7 +19,7 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener{
 
     RequestQueue requestQueue;
 
-    ConexionDB con;
+    ConexionDB conexionDB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +32,8 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener{
         tvResPass =  findViewById(R.id.etPassword);
         btIniciarSesion =  findViewById(R.id.btIniciarSesion);
 
-        con = new ConexionDB();
+
+        conexionDB = new ConexionDB();
 
         //Ocultar la barra de accion, por que queda feo jiji
         getSupportActionBar().hide();
@@ -75,7 +76,8 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener{
             }
             array.put(obj);*/
 
-            con.iniciarSesion(nombre, pass, getApplicationContext());
+            conexionDB.iniciarSesion(nombre, pass, getApplicationContext());
+
             //prueba();
 
 

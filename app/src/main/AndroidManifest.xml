@@ -10,8 +10,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".UnirClub"></activity>
+        android:theme="@style/AppTheme"
+        android:name=".GlobalClass">
+
+        <activity android:name=".UnirClub" />
         <activity android:name=".CrearClub" />
         <activity android:name=".InicioAdmni" />
         <activity android:name=".SignUp" />
@@ -20,7 +22,6 @@
             android:name=".MenuInicio"
             android:label="@string/title_activity_menu_inicio"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Registrarse" />
         <activity android:name=".LogIn">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

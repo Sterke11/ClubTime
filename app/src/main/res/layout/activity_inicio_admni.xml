@@ -29,7 +29,7 @@
         app:srcCompat="@drawable/logogrande" />
 
     <Button
-        android:id="@+id/btAgregaClub"
+        android:id="@+id/btCreaClub"
         android:layout_width="58dp"
         android:layout_height="63dp"
         android:layout_marginEnd="36dp"
@@ -42,15 +42,16 @@
         android:id="@+id/tvCreaClub"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginBottom="52dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginBottom="48dp"
         android:fontFamily="@font/roboto"
         android:text="Crea un Club"
         android:textColor="#03A9F4"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btAgregaClub"
-        app:layout_constraintHorizontal_bias="0.912"
+        app:layout_constraintEnd_toStartOf="@+id/btCreaClub"
+        app:layout_constraintHorizontal_bias="0.303"
         app:layout_constraintStart_toStartOf="parent" />
 
     <android.support.v7.widget.RecyclerView

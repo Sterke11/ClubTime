@@ -11,6 +11,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name="com.example.clubtime.GlobalClass"
         android:allowBackup="true"
         android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
         android:debuggable="true"
@@ -30,7 +31,6 @@
             android:name="com.example.clubtime.MenuInicio"
             android:label="@string/title_activity_menu_inicio"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name="com.example.clubtime.Registrarse" />
         <activity android:name="com.example.clubtime.LogIn" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -38,6 +38,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <provider
+            android:name="android.arch.lifecycle.ProcessLifecycleOwnerInitializer"
+            android:authorities="com.example.clubtime.lifecycle-trojan"
+            android:exported="false"
+            android:multiprocess="true" />
     </application>
 
 </manifest>
