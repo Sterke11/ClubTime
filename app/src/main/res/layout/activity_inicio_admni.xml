@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/imgEncabezado"
-        android:layout_width="417dp"
-        android:layout_height="103dp"
+        android:layout_width="412dp"
+        android:layout_height="100dp"
         android:padding="0px"
         android:paddingTop="0px"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,48 +24,63 @@
         android:layout_marginBottom="12dp"
         app:layout_constraintBottom_toBottomOf="@+id/imgEncabezado"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/logogrande" />
-
-    <Button
-        android:id="@+id/btCreaClub"
-        android:layout_width="58dp"
-        android:layout_height="63dp"
-        android:layout_marginEnd="36dp"
-        android:layout_marginBottom="36dp"
-        android:background="@drawable/vector1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <TextView
-        android:id="@+id/tvCreaClub"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginStart="124dp"
-        android:layout_marginBottom="48dp"
-        android:fontFamily="@font/roboto"
-        android:text="Crea un Club"
-        android:textColor="#03A9F4"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btCreaClub"
-        app:layout_constraintHorizontal_bias="0.303"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rvClubs"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="30dp"
+        android:layout_width="359dp"
+        android:layout_height="450dp"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/tvCreaClub"
+
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgEncabezado" />
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:ignore="MissingConstraints">
+
+        <com.github.clans.fab.FloatingActionMenu
+
+            android:id="@+id/floatingActionMenu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:menu_fab_label="Cerrar"
+            app:menu_colorNormal="@color/colorPrimary"
+            app:menu_colorRipple="@color/colorPrimary"
+            app:menu_colorPressed="@color/colorPrimary"
+            android:paddingRight="25dp"
+            android:paddingBottom="25dp"
+
+
+            >
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/btAdminCreaClub"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_new_icon"
+                app:fab_colorNormal="@color/colorPrimary"
+                app:fab_colorPressed="@color/colorPrimary"
+                app:fab_colorRipple="@color/colorPrimary"
+                app:fab_label="Crear Club"></com.github.clans.fab.FloatingActionButton>
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/btAdminAgregaClub"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_action_name"
+                app:fab_colorNormal="@color/colorPrimary"
+                app:fab_colorPressed="@color/colorPrimary"
+                app:fab_colorRipple="@color/colorPrimary"
+                app:fab_label="Agregar Club"></com.github.clans.fab.FloatingActionButton>
+
+        </com.github.clans.fab.FloatingActionMenu>
+
+</RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>

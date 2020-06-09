@@ -7,16 +7,123 @@
     tools:context=".ui.gallery.GalleryFragment">
 
     <TextView
-        android:id="@+id/text_gallery"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/tv_HorarioDe"
+        android:layout_width="225dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="160dp"
+        android:text="Establecer horario del club:"
+        android:textColor="#0091BF"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgEncabezado"
+        android:layout_width="412dp"
+        android:layout_height="100dp"
+        android:padding="0px"
+        android:paddingTop="0px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/rectangle1" />
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="200dp"
+        android:layout_height="129dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgEncabezado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/logogrande" />
+
+    <TextView
+        android:id="@+id/tv_hora_ini"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="seleccione hora inicial"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintStart_toEndOf="@+id/tv_HorarioDe2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_HorarioDe" />
+
+    <TextView
+        android:id="@+id/tv_hora_fin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:hint="seleccione hora final"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintStart_toEndOf="@+id/tv_HorarioHasta"
+        app:layout_constraintTop_toBottomOf="@+id/tv_hora_ini" />
+
+    <TextView
+        android:id="@+id/tv_HorarioHasta"
+        android:layout_width="24dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="28dp"
+        android:text="hasta:"
+        android:textColor="#0091BF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/iv_CargarImagen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_HorarioDe2"
+        app:layout_constraintVertical_bias="0.045" />
+
+    <TextView
+        android:id="@+id/tv_HorarioDe2"
+        android:layout_width="24dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="20dp"
+        android:text="de:"
+        android:textColor="#0091BF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_HorarioDe" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+    </RelativeLayout>
+
+    <com.github.clans.fab.FloatingActionButton
+
+        android:id="@+id/floatingGuardarHorario"
+        android:layout_width="72dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="16dp"
+        android:paddingRight="25dp"
+        android:paddingBottom="25dp"
+        android:src="@drawable/ic_paloma_blanca"
+        app:fab_colorNormal="@color/colorPrimary"
+        app:fab_colorPressed="@color/colorPrimary"
+        app:fab_colorRipple="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:menu_fab_label="Guardar">
+
+    </com.github.clans.fab.FloatingActionButton>
+
+    <ImageView
+        android:id="@+id/iv_CargarImagen"
+        android:layout_width="265dp"
+        android:layout_height="270dp"
+        android:src="@drawable/sinimagen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_hora_fin"
+        app:layout_constraintVertical_bias="0.219" />
+
 </android.support.constraint.ConstraintLayout>

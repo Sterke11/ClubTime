@@ -24,11 +24,11 @@ public class AdapterData extends RecyclerView.Adapter<AdapterData.ViewHolderData
     public ViewHolderData onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
 
         if(Utilidades.CON_INFO==Utilidades.status){
-            View view= LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.itemlist,null,false);
+            View view= LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.itemlist,viewGroup,false);
             view.setOnClickListener(this);
             return new ViewHolderData(view);
         }else {
-            View view= LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_void,null,false);
+            View view= LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_void,viewGroup,false);
             return new ViewHolderData(view);
         }
 
@@ -42,7 +42,7 @@ public class AdapterData extends RecyclerView.Adapter<AdapterData.ViewHolderData
             viewHolderData.tv_InfoList.setText(listaDatos.get(i).getFechAlta());
 //        viewHolderData.iv_ImagenClubList.setImageResource(listaDatos.get(i).getFoto());
         }else{
-            viewHolderData.tv_SinResultados.setText("Sin resultados");
+            viewHolderData.tv_SinResultados.setText("Sin Clubs");
         }
     }
 

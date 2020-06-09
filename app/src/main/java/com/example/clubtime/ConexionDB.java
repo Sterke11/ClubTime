@@ -50,10 +50,11 @@ public class ConexionDB implements Response.ErrorListener {
                     try {
                         jsonObject = response.getJSONObject(0);
 
-                        //PASAR DATOS AL OBJETO USUARIO, FAVOR DE CONSULTAR EL SEGUNDO METODO DE LA CLASE ConexionDB
-                        usuario = new Usuario(jsonObject);
+                        if (!jsonObject.getString("nombre_usuario").equals("none")) {
 
-                        if (!usuario.getNombre().equals("none")) {
+                            //PASAR DATOS AL OBJETO USUARIO, FAVOR DE CONSULTAR EL SEGUNDO METODO DE LA CLASE ConexionDB
+                            usuario = new Usuario(jsonObject);
+
                             if (usuario.getTipo() == 1){
                                 Intent intent = new Intent(context, InicioAdmni.class);
                                 //Toast.makeText(context, "none", Toast.LENGTH_LONG).show();
@@ -94,9 +95,9 @@ public class ConexionDB implements Response.ErrorListener {
         }
     }
 
-    public void registrarUser(String nombre, String pass, String apellido_paterno, String apellido_materno, String correo, String boleta, final Context context){
+    public void registrarUser(String nombre, String pass, String apellido_paterno, String apellido_materno, String correo, String boleta,int tipo_usuario, final Context context){
 
-        String url = "https://clubescom.000webhostapp.com/consultas.php?nombre="+nombre+"&pass="+pass+"&tipo=registro"+"&apellido_mat="+apellido_materno+"&apellido_pat="+apellido_paterno+"&correo="+correo+"&boleta="+boleta;
+        String url = "https://clubescom.000webhostapp.com/consultas.php?nombre="+nombre+"&pass="+pass+"&tipo=registro"+"&apellido_mat="+apellido_materno+"&apellido_pat="+apellido_paterno+"&correo="+correo+"&boleta="+boleta+"&tipo_usuario="+tipo_usuario;
         this.context = context;
 
         JSONArray data2=new JSONArray();
@@ -138,7 +139,7 @@ public class ConexionDB implements Response.ErrorListener {
         requestQueue.add(jsonArrayRequest);
     }
 
-    public void crearClub(String nombre, String pass , String idClub, final Context context){
+    public void crearClub(String nombre, String pass , String idClub, Usuario usuario, final Context context){
 
         //GlobalClass gc= (GlobalClass) context;
         String active_user= usuario.getNombreUser();
@@ -184,7 +185,7 @@ public class ConexionDB implements Response.ErrorListener {
         requestQueue.add(jsonArrayRequest);
     }
 
-    public void getClubs(@NotNull Usuario usuario, final RecyclerView rvClubs, final Context context){
+    public void getClubs(@NotNull final Usuario usuario, final RecyclerView rvClubs, final Context context){
 
         //GlobalClass gc=new GlobalClass();
         this.usuario = usuario;
@@ -208,11 +209,12 @@ public class ConexionDB implements Response.ErrorListener {
                     try {
                         jsonObject = response.getJSONObject(0);
 
-                        club = new Club(jsonObject);
+
 
                         //resp = jsonObject.getString("nombre_club");
 
-                        if (!club.getNombre().equals("none")) {
+                        if (!jsonObject.getString("nombre_club").equals("none")) {
+                            club = new Club(jsonObject);
                             Utilidades.status=1;
 
                             rvClubs.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false));
@@ -230,15 +232,28 @@ public class ConexionDB implements Response.ErrorListener {
                                 @Override
                                 public void onClick(View v) {
                                     Toast.makeText(context,"Usted ha seleccionado "+ finalList.get(rvClubs.getChildAdapterPosition(v)).getNombre(),Toast.LENGTH_LONG).show();
+                                    Intent intent = new Intent(context,MenuPrincipalClubAdmin.class);
+                                    intent.putExtra("ative_club", finalList.get(rvClubs.getChildAdapterPosition(v)));
+                                    intent.putExtra("usuario",usuario);
+                                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+                                    //String message = editText.getText().toString();
+                                    //intent.putExtra(EXTRA_MESSAGE, message);
+                                    context.startActivity(intent);
                                 }
                             });
                             rvClubs.setAdapter(adapter);
 
                         } else {
                             Utilidades.status=0;
+                            list = new ArrayList<Club>();
+                            list.add(new Club());
                             rvClubs.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false));
-                            list=new ArrayList<Club>();
-                            Toast.makeText(context, "El usuario o contraseña es erroneo", Toast.LENGTH_LONG).show();
+                            adapter = new AdapterData(list);
+                            rvClubs.setAdapter(adapter);
+                            Toast.makeText(context, "Niunguno", Toast.LENGTH_LONG).show();
+
+
                         }
                     } catch (Exception e) {
                         e.printStackTrace();

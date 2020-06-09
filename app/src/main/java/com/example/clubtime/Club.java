@@ -1,12 +1,14 @@
 package com.example.clubtime;
 
+import android.app.Application;
+
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.Serializable;
 
-public class Club implements Serializable {
+public class Club  extends Application implements Serializable {
 
     private int ID;
     private String Alias;

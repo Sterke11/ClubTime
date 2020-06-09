@@ -13,6 +13,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class CrearClub extends AppCompatActivity implements View.OnClickListener, TextWatcher {
 
@@ -21,6 +22,7 @@ public class CrearClub extends AppCompatActivity implements View.OnClickListener
     EditText et_Pass;
     Button bt_CreaClub;
     ConexionDB db;
+    Usuario usuario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +31,7 @@ public class CrearClub extends AppCompatActivity implements View.OnClickListener
         //Ocultar la barra de accion, por que queda feo jiji
         getSupportActionBar().hide();
 
+        //Iniciar componentes de la actividad
         et_Nombre=findViewById(R.id.et_Nombre);
         et_IdClub=findViewById(R.id.et_IdClub);
         et_Pass=findViewById(R.id.et_Pass);
@@ -55,14 +58,16 @@ public class CrearClub extends AppCompatActivity implements View.OnClickListener
             if(nombre.equals("") || pass.equals("")|| idClub.equals("")){
                 if(nombre.equals(""))           et_Nombre.getBackground().setColorFilter(Color.parseColor("#7f7f7f"), PorterDuff.Mode.DARKEN);
                 if(idClub.equals(""))       et_IdClub.getBackground().setColorFilter(Color.parseColor("#7f7f7f"), PorterDuff.Mode.DARKEN);
+                if(pass.equals(""))       et_IdClub.getBackground().setColorFilter(Color.parseColor("#7f7f7f"), PorterDuff.Mode.DARKEN);
                 Toast.makeText(getApplicationContext(),"Los campos no pueden estar vacios",Toast.LENGTH_LONG).show();
             }else if(pass.length()<7){
                 Toast.makeText(getApplicationContext(),"La contraseña debe ser minimo de 7 caracteres",Toast.LENGTH_LONG).show();
                 et_Pass.getBackground().setColorFilter(Color.parseColor("#7f7f7f"), PorterDuff.Mode.DARKEN);
 
             }else {
+                usuario = (Usuario) Objects.requireNonNull(getIntent().getExtras()).getSerializable("usuario");
 
-                db.crearClub(et_Nombre.getText().toString(),et_Pass.getText().toString(),et_IdClub.getText().toString(),getApplicationContext());
+                db.crearClub(et_Nombre.getText().toString(),et_Pass.getText().toString(),et_IdClub.getText().toString(),usuario,getApplicationContext());
             }
         }
 

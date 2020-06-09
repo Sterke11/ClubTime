@@ -1,5 +1,7 @@
 package com.example.clubtime;
 
+import android.app.Application;
+
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -7,7 +9,7 @@ import org.json.JSONObject;
 import java.io.Serializable;
 import java.text.ParseException;
 
-public class Usuario implements Serializable {
+public class Usuario extends Application implements Serializable {
 
     private int ID;
     private String NombreUser;

@@ -15,6 +15,12 @@ anim design_bottom_sheet_slide_in
 anim design_bottom_sheet_slide_out
 anim design_snackbar_in
 anim design_snackbar_out
+anim fab_scale_down
+anim fab_scale_up
+anim fab_slide_in_from_left
+anim fab_slide_in_from_right
+anim fab_slide_out_to_left
+anim fab_slide_out_to_right
 anim nav_default_enter_anim
 anim nav_default_exit_anim
 anim nav_default_pop_enter_anim
@@ -245,6 +251,26 @@ attr fabCradleRoundedCornerRadius
 attr fabCradleVerticalOffset
 attr fabCustomSize
 attr fabSize
+attr fab_colorDisabled
+attr fab_colorNormal
+attr fab_colorPressed
+attr fab_colorRipple
+attr fab_elevationCompat
+attr fab_hideAnimation
+attr fab_label
+attr fab_progress
+attr fab_progress_backgroundColor
+attr fab_progress_color
+attr fab_progress_indeterminate
+attr fab_progress_max
+attr fab_progress_showBackground
+attr fab_shadowColor
+attr fab_shadowRadius
+attr fab_shadowXOffset
+attr fab_shadowYOffset
+attr fab_showAnimation
+attr fab_showShadow
+attr fab_size
 attr fastScrollEnabled
 attr fastScrollHorizontalThumbDrawable
 attr fastScrollHorizontalTrackDrawable
@@ -396,6 +422,45 @@ attr maxButtonHeight
 attr maxImageSize
 attr measureWithLargestChild
 attr menu
+attr menu_animationDelayPerItem
+attr menu_backgroundColor
+attr menu_buttonSpacing
+attr menu_buttonToggleAnimation
+attr menu_colorNormal
+attr menu_colorPressed
+attr menu_colorRipple
+attr menu_fab_hide_animation
+attr menu_fab_label
+attr menu_fab_show_animation
+attr menu_fab_size
+attr menu_icon
+attr menu_labels_colorNormal
+attr menu_labels_colorPressed
+attr menu_labels_colorRipple
+attr menu_labels_cornerRadius
+attr menu_labels_customFont
+attr menu_labels_ellipsize
+attr menu_labels_hideAnimation
+attr menu_labels_margin
+attr menu_labels_maxLines
+attr menu_labels_padding
+attr menu_labels_paddingBottom
+attr menu_labels_paddingLeft
+attr menu_labels_paddingRight
+attr menu_labels_paddingTop
+attr menu_labels_position
+attr menu_labels_showAnimation
+attr menu_labels_showShadow
+attr menu_labels_singleLine
+attr menu_labels_style
+attr menu_labels_textColor
+attr menu_labels_textSize
+attr menu_openDirection
+attr menu_shadowColor
+attr menu_shadowRadius
+attr menu_shadowXOffset
+attr menu_shadowYOffset
+attr menu_showShadow
 attr multiChoiceItemLayout
 attr navGraph
 attr navigationContentDescription
@@ -851,6 +916,8 @@ dimen design_textinput_caption_translate_y
 dimen disabled_alpha_material_dark
 dimen disabled_alpha_material_light
 dimen fab_margin
+dimen fab_size_mini
+dimen fab_size_normal
 dimen fastscroll_default_thickness
 dimen fastscroll_margin
 dimen fastscroll_minimum_range
@@ -864,6 +931,7 @@ dimen hint_pressed_alpha_material_light
 dimen item_touch_helper_max_drag_scroll_per_frame
 dimen item_touch_helper_swipe_escape_max_velocity
 dimen item_touch_helper_swipe_escape_velocity
+dimen labels_text_size
 dimen mtrl_bottomappbar_fabOffsetEndMode
 dimen mtrl_bottomappbar_fab_cradle_margin
 dimen mtrl_bottomappbar_fab_cradle_rounded_corner_radius
@@ -1029,25 +1097,33 @@ drawable avd_hide_password
 drawable avd_show_password
 drawable botonazulfuertea
 drawable campollenado
+drawable clubbiconoapp
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable fab_add
 drawable fechaazulizq
 drawable flechaazulder
 drawable flechablancader
 drawable fondogrande
+drawable ic_action_name
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_menu_camera
 drawable ic_menu_gallery
+drawable ic_menu_hambur
 drawable ic_menu_slideshow
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_new_icon
+drawable ic_paloma_blanca
+drawable ic_setting_icon
 drawable logogrande
+drawable logogranderecortado
 drawable mtrl_snackbar_background
 drawable mtrl_tabs_default_indicator
 drawable navigation_empty_icon
@@ -1066,7 +1142,9 @@ drawable notify_panel_notification_icon_bg
 drawable rectangle1
 drawable rounded_border_textview
 drawable rounded_border_textviewhite
+drawable rounded_top_border_button
 drawable side_nav_bar
+drawable sin_resultados_robort
 drawable sinimagen
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -1124,8 +1202,9 @@ id barrier
 id beginning
 id blocking
 id bottom
+id btAdminAgregaClub
+id btAdminCreaClub
 id btAgregaClub
-id btCreaClub
 id btCrearClub
 id btIniciarSesion
 id bt_Registra
@@ -1158,6 +1237,8 @@ id design_navigation_view
 id dimensions
 id direct
 id disableHome
+id down
+id drawer_layout
 id edit_query
 id end
 id end_padder
@@ -1179,11 +1260,14 @@ id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
 id fab
+id fab_label
 id fill
 id fill_horizontal
 id fill_vertical
 id filled
 id fixed
+id floatingActionMenu
+id floatingGuardarHorario
 id forever
 id ghost_view
 id gone
@@ -1196,6 +1280,8 @@ id icon_group
 id idImagen
 id ifRoom
 id image
+id imageView
+id imageView2
 id imgAnt
 id imgEncabezado
 id imgLogo
@@ -1204,6 +1290,8 @@ id info
 id invisible
 id italic
 id item_touch_helper_previous_elevation
+id ivLogo
+id iv_CargarImagen
 id iv_ImagenClubList
 id labeled
 id largeLabel
@@ -1212,6 +1300,7 @@ id line1
 id line3
 id listMode
 id list_item
+id marquee
 id masked
 id media_actions
 id message
@@ -1229,6 +1318,7 @@ id nav_graph3
 id nav_home
 id nav_host_fragment
 id nav_slideshow
+id nav_view
 id navigation_header_container
 id never
 id none
@@ -1304,7 +1394,6 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textView
-id text_gallery
 id text_home
 id text_input_password_toggle
 id text_slideshow
@@ -1326,10 +1415,12 @@ id transition_scene_layoutid_cache
 id transition_transform
 id tvAgregaClub
 id tvClubs
-id tvCreaClub
 id tvEmail
 id tvPass
 id tvRegistrarse
+id tv_HorarioDe
+id tv_HorarioDe2
+id tv_HorarioHasta
 id tv_IDClub
 id tv_IdClub
 id tv_InfoList
@@ -1342,6 +1433,9 @@ id tv_NombreClubList
 id tv_Pass
 id tv_SinResultados
 id tv_boleta
+id tv_hora_fin
+id tv_hora_ini
+id tv_menu_nombre_club
 id tv_nombre
 id uniform
 id unlabeled
@@ -1404,9 +1498,14 @@ layout activity_inicio_admni
 layout activity_inicio_alumno
 layout activity_login
 layout activity_main
+layout activity_main2
 layout activity_menu_inicio
+layout activity_menu_principal_club_admin
 layout activity_sign_up
+layout activity_splash_screen
 layout activity_unir_club
+layout app_bar_main
+layout content_main
 layout content_menu_inicio
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -1450,8 +1549,9 @@ layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
 menu activity_main_drawer
-menu prueba
+menu menu_principal_club_admin
 mipmap ic_launcher
+mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 navigation mobile_navigation
 navigation nav_graph
@@ -1531,6 +1631,9 @@ string second_fragment_label
 string status_bar_notification_info_overflow
 string title_activity_menu_inicio
 string title_activity_menu_principal
+string title_activity_menu_principal_club_admin
+string title_activity_principal_menu_club
+string title_activity_principal_menu_club1
 string title_activity_prueba
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
@@ -2073,8 +2176,9 @@ styleable CoordinatorLayout keylines statusBarBackground
 styleable CoordinatorLayout_Layout android_layout_gravity layout_anchor layout_anchorGravity layout_behavior layout_dodgeInsetEdges layout_insetEdge layout_keyline
 styleable DesignTheme bottomSheetDialogTheme bottomSheetStyle
 styleable DrawerArrowToggle arrowHeadLength arrowShaftLength barLength color drawableSize gapBetweenBars spinBars thickness
-styleable FloatingActionButton backgroundTint backgroundTintMode borderWidth elevation fabCustomSize fabSize hideMotionSpec hoveredFocusedTranslationZ maxImageSize pressedTranslationZ rippleColor showMotionSpec useCompatPadding
+styleable FloatingActionButton backgroundTint backgroundTintMode borderWidth elevation fabCustomSize fabSize fab_colorDisabled fab_colorNormal fab_colorPressed fab_colorRipple fab_elevationCompat fab_hideAnimation fab_label fab_progress fab_progress_backgroundColor fab_progress_color fab_progress_indeterminate fab_progress_max fab_progress_showBackground fab_shadowColor fab_shadowRadius fab_shadowXOffset fab_shadowYOffset fab_showAnimation fab_showShadow fab_size hideMotionSpec hoveredFocusedTranslationZ maxImageSize pressedTranslationZ rippleColor showMotionSpec useCompatPadding
 styleable FloatingActionButton_Behavior_Layout behavior_autoHide
+styleable FloatingActionMenu menu_animationDelayPerItem menu_backgroundColor menu_buttonSpacing menu_buttonToggleAnimation menu_colorNormal menu_colorPressed menu_colorRipple menu_fab_hide_animation menu_fab_label menu_fab_show_animation menu_fab_size menu_icon menu_labels_colorNormal menu_labels_colorPressed menu_labels_colorRipple menu_labels_cornerRadius menu_labels_customFont menu_labels_ellipsize menu_labels_hideAnimation menu_labels_margin menu_labels_maxLines menu_labels_padding menu_labels_paddingBottom menu_labels_paddingLeft menu_labels_paddingRight menu_labels_paddingTop menu_labels_position menu_labels_showAnimation menu_labels_showShadow menu_labels_singleLine menu_labels_style menu_labels_textColor menu_labels_textSize menu_openDirection menu_shadowColor menu_shadowRadius menu_shadowXOffset menu_shadowYOffset menu_showShadow
 styleable FlowLayout itemSpacing lineSpacing
 styleable FontFamily fontProviderAuthority fontProviderCerts fontProviderFetchStrategy fontProviderFetchTimeout fontProviderPackage fontProviderQuery
 styleable FontFamilyFont android_font android_fontWeight android_fontStyle android_ttcIndex android_fontVariationSettings font fontStyle fontVariationSettings fontWeight ttcIndex
@@ -2122,3 +2226,4 @@ styleable Toolbar android_gravity android_minHeight buttonGravity collapseConten
 styleable View android_theme android_focusable paddingEnd paddingStart theme
 styleable ViewBackgroundHelper android_background backgroundTint backgroundTintMode
 styleable ViewStubCompat android_id android_layout android_inflatedId
+xml provider_paths
