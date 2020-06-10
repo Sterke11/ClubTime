@@ -1,23 +1,27 @@
 package com.example.clubtime;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Parcelable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.NetworkError;
 import com.android.volley.NoConnectionError;
 import com.android.volley.ParseError;
+import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.ServerError;
 import com.android.volley.TimeoutError;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
 import org.jetbrains.annotations.NotNull;
@@ -26,6 +30,8 @@ import org.json.JSONObject;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.ExecutionException;
 
 public class ConexionDB implements Response.ErrorListener {
@@ -61,7 +67,7 @@ public class ConexionDB implements Response.ErrorListener {
                                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                                 //Crear la variable global del usuario activo
                                 //GlobalClass gc= (GlobalClass)  context;
-                                //gc.setActive_user(nombre);
+                                //gc.setActive_user(usuario);
                                 intent.putExtra("usuario", usuario);
                                 context.startActivity(intent);
                             }
@@ -141,7 +147,6 @@ public class ConexionDB implements Response.ErrorListener {
 
     public void crearClub(String nombre, String pass , String idClub, Usuario usuario, final Context context){
 
-        //GlobalClass gc= (GlobalClass) context;
         String active_user= usuario.getNombreUser();
 
         String url = "https://clubescom.000webhostapp.com/consultas.php?nombre="+nombre+"&pass="+pass+"&tipo=crearClub"+"&alias_club="+idClub+"&user_alta="+active_user;
@@ -185,12 +190,64 @@ public class ConexionDB implements Response.ErrorListener {
         requestQueue.add(jsonArrayRequest);
     }
 
-    public void getClubs(@NotNull final Usuario usuario, final RecyclerView rvClubs, final Context context){
+    public void asignarFotoHorarioClub(final Usuario usuario, final Club club, final String[] horario, final String foto, final Context context){
+        final ProgressDialog progreso=new ProgressDialog(context);
+        //progreso.setMessage("Cargando...");
+        //progreso.show();
+        GlobalClass gc= (GlobalClass) context;
+
+        this.context = context;
+
+        String active_user= usuario.getNombreUser();
+
+        String url = "https://clubescom.000webhostapp.com/consultas.php?tipo=asignarFotoHorarioClub";
+        this.context = context;
+
+        RequestQueue requestQueue;
+        StringRequest stringRequest=new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                //progreso.hide();
+                if(response.equals("registrado")){
+
+                    getOneClub(usuario,club,context);
+                    Toast.makeText(context,"Modificacion con exito",Toast.LENGTH_LONG).show();
+
+                }else {
+                    Toast.makeText(context,"No se ha podido modificar vuelva a intentarlo mas tarde",Toast.LENGTH_LONG).show();
+                }
+            }
+        },this)
+        {
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                String alias_club=club.getAlias();
+                String user_mod=usuario.getCorreo();
+                String hora_entrada=horario[0];
+                String hora_salida=horario[1];
+                String imagen=foto;
+
+                Map<String,String> parametros=new HashMap<>();
+                parametros.put("alias_club",alias_club);
+                parametros.put("user_mod",user_mod);
+                parametros.put("hora_entrada",hora_entrada);
+                parametros.put("hora_salida",hora_salida);
+                parametros.put("imagen",imagen);
+                return parametros;
+            }
+        };
+
+
+        requestQueue= Volley.newRequestQueue(context);
+        requestQueue.add(stringRequest);
+    }
+
+    public void getOneClub(@NotNull final Usuario usuarioArg, Club clubArg, final Context context){
 
         //GlobalClass gc=new GlobalClass();
-        this.usuario = usuario;
+
         String NomUsuario = usuario.getNombreUser();
-        String url = "https://clubescom.000webhostapp.com/consultas.php?Nombre="+NomUsuario+"&tipo=getClubs";
+        String url = "https://clubescom.000webhostapp.com/consultas.php?Nombre="+NomUsuario+"&tipo=getOneClub"+"&id_club="+clubArg.getID();
         this.context = context;
 
         JSONArray data2=new JSONArray();
@@ -209,9 +266,58 @@ public class ConexionDB implements Response.ErrorListener {
                     try {
                         jsonObject = response.getJSONObject(0);
 
-
-
                         //resp = jsonObject.getString("nombre_club");
+
+                        if (!jsonObject.getString("nombre_club").equals("none")) {
+                            club= new Club(jsonObject);
+
+
+                        } else {
+
+                            Toast.makeText(context, "No se pudo recuperar el Club", Toast.LENGTH_LONG).show();
+
+
+                        }
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                        Toast.makeText(context, "error1", Toast.LENGTH_LONG).show();
+                    }
+
+                }
+            }, this);
+
+            requestQueue = Volley.newRequestQueue(context);
+
+            requestQueue.add(jsonArrayRequest);
+        }
+        catch (Exception e){
+            Toast.makeText(context, "No jalo " + e.toString(), Toast.LENGTH_LONG).show();
+        }
+    }
+
+    public void getClubs(final Usuario usuario, final RecyclerView rvClubs, final Context context){
+        //GlobalClass gc= (GlobalClass) context;
+
+        String NomUsuario = usuario.getNombre();
+        String url = "https://clubescom.000webhostapp.com/consultas.php?Nombre="+NomUsuario+"&tipo=getClubs";
+        this.context = context;
+
+        JSONArray data2=new JSONArray();
+        RequestQueue requestQueue;
+        try {
+            JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(url, new Response.Listener<JSONArray>() {
+                @Override
+                public void onResponse(JSONArray response) {
+
+                    JSONObject jsonObject = null;
+                    //String resp = null;
+                    //ArrayList<ClubsVo> list=null;
+                    ArrayList<Club> list=null;
+                    ClubsVo clubsVo=null;
+                    AdapterData adapter=null;
+
+                    try {
+                        jsonObject = response.getJSONObject(0);
 
                         if (!jsonObject.getString("nombre_club").equals("none")) {
                             club = new Club(jsonObject);
@@ -220,6 +326,7 @@ public class ConexionDB implements Response.ErrorListener {
                             rvClubs.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false));
                             //list=new ArrayList<ClubsVo>();
                             list = new ArrayList<Club>();
+
                             for(int i=0;i<response.length();i++){
                                 jsonObject=response.getJSONObject(i);
                                 //clubsVo=new ClubsVo(jsonObject.getString("nombre_club"),"Horario de "+jsonObject.getString("hora_entrada")+"a"+jsonObject.getString("hora_salida"),i);
@@ -231,10 +338,11 @@ public class ConexionDB implements Response.ErrorListener {
                             adapter.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View v) {
+
                                     Toast.makeText(context,"Usted ha seleccionado "+ finalList.get(rvClubs.getChildAdapterPosition(v)).getNombre(),Toast.LENGTH_LONG).show();
                                     Intent intent = new Intent(context,MenuPrincipalClubAdmin.class);
                                     intent.putExtra("ative_club", finalList.get(rvClubs.getChildAdapterPosition(v)));
-                                    intent.putExtra("usuario",usuario);
+                                    intent.putExtra("usuario", usuario);
                                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
                                     //String message = editText.getText().toString();
@@ -252,6 +360,91 @@ public class ConexionDB implements Response.ErrorListener {
                             adapter = new AdapterData(list);
                             rvClubs.setAdapter(adapter);
                             Toast.makeText(context, "Niunguno", Toast.LENGTH_LONG).show();
+
+
+                        }
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                        Toast.makeText(context, "error1", Toast.LENGTH_LONG).show();
+                    }
+
+                }
+            }, this);
+
+            requestQueue = Volley.newRequestQueue(context);
+
+            requestQueue.add(jsonArrayRequest);
+        }
+        catch (Exception e){
+            Toast.makeText(context, "No jalo " + e.toString(), Toast.LENGTH_LONG).show();
+        }
+    }
+
+    public void getAdmonClub(final Club club, final RecyclerView rvAdmon, final Context context){
+        //GlobalClass gc= (GlobalClass) context;
+
+        int ID = club.getID();
+        String url = "https://clubescom.000webhostapp.com/consultas.php?IDClub="+ID+"&tipo=getAdmonClubs";
+        this.context = context;
+
+        JSONArray data2=new JSONArray();
+        RequestQueue requestQueue;
+        try {
+            JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(url, new Response.Listener<JSONArray>() {
+                @Override
+                public void onResponse(JSONArray response) {
+
+                    JSONObject jsonObject = null;
+                    //String resp = null;
+                    //ArrayList<ClubsVo> list=null;
+                    ArrayList<Usuario> list=null;
+                    ClubsVo clubsVo=null;
+                    AdapterDataUsuario adapter=null;
+
+                    try {
+                        jsonObject = response.getJSONObject(0);
+
+                        if (!jsonObject.getString("nombre_usuario").equals("none")) {
+                            usuario = new Usuario(jsonObject);
+                            Utilidades.status=1;
+
+                            rvAdmon.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false));
+                            //list=new ArrayList<ClubsVo>();
+                            list = new ArrayList<Usuario>();
+
+                            for(int i=0;i<response.length();i++){
+                                jsonObject=response.getJSONObject(i);
+                                //clubsVo=new ClubsVo(jsonObject.getString("nombre_club"),"Horario de "+jsonObject.getString("hora_entrada")+"a"+jsonObject.getString("hora_salida"),i);
+                                usuario = new Usuario(jsonObject);
+                                list.add(usuario);
+                            }
+                            adapter = new AdapterDataUsuario(list);
+                            final ArrayList<Usuario> finalList = list;
+                            adapter.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+
+                                    Toast.makeText(context,"Usted ha seleccionado "+ finalList.get(rvAdmon.getChildAdapterPosition(v)).getNombreUser(),Toast.LENGTH_LONG).show();
+//                                    Intent intent = new Intent(context,MenuPrincipalClubAdmin.class);
+//                                    intent.putExtra("ative_club", finalList.get(rvAdmon.getChildAdapterPosition(v)));
+//                                    intent.putExtra("usuario", usuario);
+//                                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//
+//                                    //String message = editText.getText().toString();
+//                                    //intent.putExtra(EXTRA_MESSAGE, message);
+//                                    context.startActivity(intent);
+                                }
+                            });
+                            rvAdmon.setAdapter(adapter);
+
+                        } else {
+                            Utilidades.status=0;
+                            list = new ArrayList<Usuario>();
+                            list.add(new Usuario());
+                            rvAdmon.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false));
+                            adapter = new AdapterDataUsuario(list);
+                            rvAdmon.setAdapter(adapter);
+                            Toast.makeText(context, "Ninguno", Toast.LENGTH_LONG).show();
 
 
                         }

@@ -24,7 +24,6 @@ public class UnirClub extends AppCompatActivity implements View.OnClickListener 
 
         imgSig.setOnClickListener(this);
         imgAnt.setOnClickListener(this);
-
     }
 
     @Override

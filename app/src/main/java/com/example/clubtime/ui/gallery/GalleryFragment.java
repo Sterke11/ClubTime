@@ -2,9 +2,7 @@ package com.example.clubtime.ui.gallery;
 
 import android.Manifest;
 import android.app.AlertDialog;
-import android.app.Application;
 import android.app.TimePickerDialog;
-import android.content.ContextWrapper;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -19,6 +17,7 @@ import android.provider.MediaStore;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.content.FileProvider;
 import android.text.format.DateFormat;
+import android.util.Base64;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -34,33 +33,38 @@ import android.widget.TimePicker;
 
 import com.example.clubtime.Club;
 import com.example.clubtime.ConexionDB;
+import com.example.clubtime.GlobalClass;
+import com.example.clubtime.MenuPrincipalClubAdmin;
 import com.example.clubtime.R;
 import com.example.clubtime.Usuario;
+import com.github.clans.fab.FloatingActionButton;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Calendar;
-
 
 
 public class GalleryFragment extends Fragment implements View.OnClickListener {
 
     private GalleryViewModel galleryViewModel;
-    private final String CARPETA_RAIZ="misImagenesPruba/";
-    private final String RUTA_IMAGEN=CARPETA_RAIZ+"misfotos";
+    private final String CARPETA_RAIZ="clubtime/";
+    private final String RUTA_IMAGEN=MenuPrincipalClubAdmin.getClubActivo().getID()+"-"+MenuPrincipalClubAdmin.getClubActivo().getAlias()+"-"+MenuPrincipalClubAdmin.getClubActivo().getNombre()+"/";
     private final int CARGAR_IMAGEN=10;
     private final int TOMAR_IMAGEN=20;
-    String path;
+    String path,fotoString;
     TextView tv_hora_fin,tv_hora_ini;
     ImageView iv_CargarImagen;
+    FloatingActionButton floatingGuardarHorario;
     int t1Hora,t1Minuto,t2Hora,t2Minuto;
-    Club club;
-    Usuario usuario;
+    Bitmap bitmap;
+    GlobalClass gc;
+
     ConexionDB bd;
 
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-        galleryViewModel =
-                ViewModelProviders.of(this).get(GalleryViewModel.class);
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        galleryViewModel = ViewModelProviders.of(this).get(GalleryViewModel.class);
         View root = inflater.inflate(R.layout.fragment_gallery, container, false);
 
         //Asignar elementos
@@ -68,6 +72,7 @@ public class GalleryFragment extends Fragment implements View.OnClickListener {
         tv_hora_fin = root.findViewById(R.id.tv_hora_fin);
         tv_hora_ini = root.findViewById(R.id.tv_hora_ini);
         iv_CargarImagen=root.findViewById(R.id.iv_CargarImagen);
+        floatingGuardarHorario=root.findViewById(R.id.floatingGuardarHorario);
 
         //Validar permisos de fotos
         if(validarPermisos()){
@@ -80,6 +85,7 @@ public class GalleryFragment extends Fragment implements View.OnClickListener {
         tv_hora_ini.setOnClickListener(this);
         tv_hora_fin.setOnClickListener(this);
         iv_CargarImagen.setOnClickListener(this);
+        floatingGuardarHorario.setOnClickListener(this);
 
         galleryViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
@@ -87,13 +93,8 @@ public class GalleryFragment extends Fragment implements View.OnClickListener {
                 //textView.setText(s);
             }
         });
-        //club=(Club) getArguments().getSerializable("club");
-
-       // usuario=(Usuario) getArguments().getSerializable("usuario");
-
-
+        gc=(GlobalClass) getActivity().getApplicationContext();
         return root;
-
     }
 
     private boolean validarPermisos() {
@@ -118,7 +119,7 @@ public class GalleryFragment extends Fragment implements View.OnClickListener {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if(requestCode==100){
             if(grantResults.length==2&&grantResults[0]==PackageManager.PERMISSION_GRANTED&&grantResults[1]==PackageManager.PERMISSION_GRANTED){
-
+                iv_CargarImagen.setEnabled(true);
             }else {
                 solicitarPermisosManual();
             }
@@ -159,12 +160,11 @@ public class GalleryFragment extends Fragment implements View.OnClickListener {
         dialogoPer.show();
     }
 
-
     @Override
     public void onClick(final View v) {
 
         if(v.getId() == R.id.tv_hora_ini) {
-            TimePickerDialog timePickerDialog = new TimePickerDialog(getContext(), AlertDialog.THEME_HOLO_LIGHT, new TimePickerDialog.OnTimeSetListener() {
+            TimePickerDialog timePickerDialogIni = new TimePickerDialog(getContext(), AlertDialog.THEME_HOLO_LIGHT, new TimePickerDialog.OnTimeSetListener() {
                 @Override
                 public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
                     t1Hora = hourOfDay;
@@ -179,13 +179,13 @@ public class GalleryFragment extends Fragment implements View.OnClickListener {
                 }
             }, 12, 0, false);
 
-            timePickerDialog.updateTime(t2Hora, t2Minuto);
-            timePickerDialog.show();
+            timePickerDialogIni.updateTime(t1Hora, t1Minuto);
+            timePickerDialogIni.show();
         }
 
         if(v.getId() == R.id.tv_hora_fin)
         {
-            TimePickerDialog timePickerDialog = new TimePickerDialog(getContext(), AlertDialog.THEME_HOLO_LIGHT, new TimePickerDialog.OnTimeSetListener() {
+            TimePickerDialog timePickerDialogfin = new TimePickerDialog(getContext(), AlertDialog.THEME_HOLO_LIGHT, new TimePickerDialog.OnTimeSetListener() {
             @Override
             public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
                 t2Hora = hourOfDay;
@@ -200,12 +200,30 @@ public class GalleryFragment extends Fragment implements View.OnClickListener {
                 }
             }, 12, 0, false);
 
-                timePickerDialog.updateTime(t2Hora, t2Minuto);
-                timePickerDialog.show();
+            timePickerDialogfin.updateTime(t2Hora, t2Minuto);
+            timePickerDialogfin.show();
 
         }
         if(v.getId() == R.id.iv_CargarImagen){
             cargarImagen();
+        }
+        if(v.getId()==R.id.floatingGuardarHorario){
+            String[] horario=new String[]{"",""};
+
+            if(!tv_hora_ini.getText().equals("seleccione hora inicial"))        horario[0]=t1Hora+":"+t1Minuto+":00";
+            if(!tv_hora_ini.getText().equals("seleccione hora inicial"))         horario[1]=t2Hora+":"+t2Minuto+":00";
+            fotoString=convertirFoto();
+            bd=new ConexionDB();
+
+            Usuario usuario = gc.getActive_user();
+            Club club = gc.getActive_club();
+
+
+            bd.asignarFotoHorarioClub(gc.getActive_user(),gc.getActive_club(),horario,fotoString,getActivity().getApplicationContext());
+
+            //NavigationView navigationView = (NavigationView) getActivity().findViewById(R.id.nav_view);
+            //View headerView = navigationView.getHeaderView(0);
+
         }
 
 
@@ -213,8 +231,16 @@ public class GalleryFragment extends Fragment implements View.OnClickListener {
 
     }
 
+    private String convertirFoto() {
+        ByteArrayOutputStream byteArrayOutputStream=new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.JPEG,100,byteArrayOutputStream);
+        byte[] fotoByte=byteArrayOutputStream.toByteArray();
+        String fotoString= Base64.encodeToString(fotoByte, Base64.DEFAULT);
+        return fotoString;
+    }
+
     private void cargarImagen() {
-        final CharSequence[] opciones={"Tomar imagen","Cargar Imagen","Cancelar"};
+        final CharSequence[] opciones={"Tomar Foto","Cargar Imagen","Cancelar"};
         final AlertDialog.Builder alertOpciones=new AlertDialog.Builder(getContext());
         alertOpciones.setTitle("Seleccione una opcion");
         alertOpciones.setItems(opciones, new DialogInterface.OnClickListener() {
@@ -226,7 +252,7 @@ public class GalleryFragment extends Fragment implements View.OnClickListener {
                 }else {
                     if(opciones[which].equals("Cargar Imagen")){
                         Intent intent=new Intent(Intent.ACTION_GET_CONTENT, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-                        intent.setType("imagen/");
+                        //intent.setType("image/");
                         startActivityForResult(intent.createChooser(intent,"Seleccione la Aplicacion"),CARGAR_IMAGEN);
                     }else{
                         dialog.dismiss();
@@ -241,32 +267,50 @@ public class GalleryFragment extends Fragment implements View.OnClickListener {
     private void tomarFoto() {
         String nombreIm = null;
         //asignar la ruta donde guardaremos la imagen
-        File fileImgen=new File(Environment.getExternalStorageDirectory(),RUTA_IMAGEN);
+        String path2=Environment.getExternalStorageDirectory()+File.separator+CARPETA_RAIZ;
+        File fileImgen=new File(path2);
 
         //pasa saber si la ruta ya existe
         boolean isCreada=fileImgen.exists();
         //si la ruta no exite la crea
+
         if(isCreada==false){
             isCreada=fileImgen.mkdir();
+            //Toast.makeText(getActivity().getApplicationContext(),"dentro de is creados",Toast.LENGTH_LONG).show();
         }
+         path2=Environment.getExternalStorageDirectory()+File.separator+CARPETA_RAIZ+File.separator+RUTA_IMAGEN;
+        fileImgen=new File(path2);
+        isCreada=fileImgen.exists();
+
+        if(isCreada==false){
+            isCreada=fileImgen.mkdir();
+            //Toast.makeText(getActivity().getApplicationContext(),"dentro de is creados",Toast.LENGTH_LONG).show();
+        }
+
+
         //si la ruta ya existe entonces creamos el nombre del archivo a guardar
         if(isCreada==true){
              nombreIm=System.currentTimeMillis()+".jpg";
+        }else {
+           // Toast.makeText(getActivity().getApplicationContext(),"dnoentrea",Toast.LENGTH_LONG).show();
         }
+
         //entonces ya tenemos el path del archivo a guardar
-        path=Environment.getExternalStorageDirectory()+File.separator+RUTA_IMAGEN+File.separator+nombreIm;
+        path=Environment.getExternalStorageDirectory()+File.separator+CARPETA_RAIZ+File.separator+RUTA_IMAGEN+File.separator+nombreIm;
 
         //crear el archivo
         File imagen=new File(path);
         Intent intent=new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
 
-        if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.N){
+       if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.N){
             String authorities= getActivity().getApplicationContext()+".provider";
-            Uri imageUri= FileProvider.getUriForFile(getContext(),authorities,imagen);
+           //Toast.makeText(getActivity().getApplicationContext(),authorities,Toast.LENGTH_LONG).show();
+            Uri imageUri= FileProvider.getUriForFile(getContext(),"com.example.clubtime.provider",imagen);
             intent.putExtra(MediaStore.EXTRA_OUTPUT,imageUri);
         }else {
             intent.putExtra(MediaStore.EXTRA_OUTPUT,Uri.fromFile(imagen));
         }
+
 
 
         //activa el metoso on ActivityResult
@@ -283,7 +327,15 @@ public class GalleryFragment extends Fragment implements View.OnClickListener {
         if(resultCode==-1 ){
             if(requestCode==CARGAR_IMAGEN){
                 Uri mipath=data.getData();
-                iv_CargarImagen.setImageURI(mipath);
+                //iv_CargarImagen.setImageURI(mipath);
+                try {
+                    bitmap=MediaStore.Images.Media.getBitmap(getContext().getContentResolver(),mipath);
+                    iv_CargarImagen.setImageBitmap(bitmap);
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }else if(requestCode==TOMAR_IMAGEN){
                 MediaScannerConnection.scanFile(getContext(), new String[]{path}, null, new MediaScannerConnection.OnScanCompletedListener() {
                     @Override
@@ -292,7 +344,7 @@ public class GalleryFragment extends Fragment implements View.OnClickListener {
 
                     }
                 });
-                Bitmap bitmap = BitmapFactory.decodeFile(path);
+                 bitmap = BitmapFactory.decodeFile(path);
                 iv_CargarImagen.setImageBitmap(bitmap);
             }
         }

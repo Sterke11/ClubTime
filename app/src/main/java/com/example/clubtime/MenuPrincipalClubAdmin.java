@@ -5,7 +5,6 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.Menu;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.design.widget.NavigationView;
 
 import androidx.navigation.NavArgument;
@@ -18,10 +17,17 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import java.io.File;
 import java.util.Objects;
+import static android.Manifest.permission.CAMERA;
+import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
+import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
 
 public class MenuPrincipalClubAdmin extends AppCompatActivity {
+    public static Club clubActivo;
+    public static Usuario usuarioActivo;
 
     private AppBarConfiguration mAppBarConfiguration;
 
@@ -37,6 +43,7 @@ public class MenuPrincipalClubAdmin extends AppCompatActivity {
         final DrawerLayout drawer = findViewById(R.id.drawer_layout);
         //Ocultar la barra de accion, por que queda feo jiji
         getSupportActionBar().hide();
+
         final NavigationView navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
@@ -48,10 +55,12 @@ public class MenuPrincipalClubAdmin extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
-     //Obtener header del menu navegador
+
+        //Obtener header del menu navegador
         View hView =navigationView.getHeaderView(0);
         TextView tv_menu_nombre_club= hView.findViewById(R.id.tv_menu_nombre_club);
         TextView tv_nombre_usuario=hView.findViewById(R.id.textView);
+
        //Obtener el club activo
         Club club = (Club) getIntent().getSerializableExtra("ative_club");
         Usuario usuario = (Usuario) Objects.requireNonNull(getIntent().getExtras()).getSerializable("usuario");
@@ -75,8 +84,28 @@ public class MenuPrincipalClubAdmin extends AppCompatActivity {
        // bundle.putSerializable("club",club);
         //navController.navigate(R.id.nav_gallery,bundle);
        // navController.navigate(R.id.nav_home,bundle);
+        //Validar permisos de fotos
+  //      if(validarPermisos()){
+
+    //    }
+
+        GlobalClass gc = (GlobalClass) getApplicationContext();
+        clubActivo = club;
+        gc.setActive_club(club);
+        gc.setActive_user(usuario);
+        usuarioActivo = gc.getActive_user();
+        Toast.makeText(getApplicationContext(),gc.getActive_club().getNombre(),Toast.LENGTH_LONG).show();
 
 
+    }
+
+    public static Club getClubActivo()
+    {
+        return clubActivo;
+    }
+    public static Usuario getUsuarioActivo()
+    {
+        return usuarioActivo;
     }
 
     @Override
@@ -92,4 +121,67 @@ public class MenuPrincipalClubAdmin extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
+/*
+    private boolean validarPermisos() {
+        if(Build.VERSION.SDK_INT<Build.VERSION_CODES.M){
+            return true;
+        }
+
+        if((checkSelfPermission(CAMERA)== PackageManager.PERMISSION_GRANTED)&&(checkSelfPermission(WRITE_EXTERNAL_STORAGE)== PackageManager.PERMISSION_GRANTED) &&(checkSelfPermission(READ_EXTERNAL_STORAGE)== PackageManager.PERMISSION_GRANTED)){
+
+            return true;
+        }
+        if(shouldShowRequestPermissionRationale(CAMERA)||shouldShowRequestPermissionRationale(WRITE_EXTERNAL_STORAGE)||shouldShowRequestPermissionRationale(READ_EXTERNAL_STORAGE)){
+            cargarDialogoPermisos();
+        }else {
+            requestPermissions(new String[]{CAMERA,WRITE_EXTERNAL_STORAGE,READ_EXTERNAL_STORAGE},100);
+        }
+        return false;
+    }
+
+    private void cargarDialogoPermisos() {
+        AlertDialog.Builder dialogoPer=new AlertDialog.Builder(MenuPrincipalClubAdmin.this);
+        dialogoPer.setTitle("Permisos Desactivados");
+        dialogoPer.setMessage("Debe aceptar los permisos para que funcione esta cosa");
+        dialogoPer.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                requestPermissions(new String[]{CAMERA,WRITE_EXTERNAL_STORAGE,READ_EXTERNAL_STORAGE},100);
+            }
+        });
+        dialogoPer.show();
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if(requestCode==100){
+            if(grantResults.length==3&&grantResults[0]==PackageManager.PERMISSION_GRANTED&&grantResults[1]==PackageManager.PERMISSION_GRANTED&&grantResults[2]==PackageManager.PERMISSION_GRANTED){
+
+            }else {
+                solicitarPermisosManual();
+            }
+        }
+    }
+    private void solicitarPermisosManual() {
+        final CharSequence[] opciones={"si","no"};
+        final AlertDialog.Builder alertOpciones=new AlertDialog.Builder(MenuPrincipalClubAdmin.this);
+        alertOpciones.setTitle("Entonces lo hacemas manual?");
+        alertOpciones.setItems(opciones, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                if(opciones[which].equals("si")){
+                    Intent intent=new Intent();
+                    Uri uri=Uri.fromParts("package", getPackageName(),null);
+                    intent.setData(uri);
+                    startActivity(intent);
+
+                }else {
+                    dialog.dismiss();
+                }
+            }
+        });
+        alertOpciones.show();
+    }*/
 }

@@ -240,6 +240,10 @@
         "source": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
     },
     {
+        "merged": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\build\\intermediates\\res\\merged\\debug\\layout_itemlist_administrador.xml.flat",
+        "source": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\src\\main\\res\\layout\\itemlist_administrador.xml"
+    },
+    {
         "merged": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\build\\intermediates\\res\\merged\\debug\\layout_app_bar_main.xml.flat",
         "source": "D:\\Superior\\4 Semestre\\ADOO\\ClubTime\\app\\src\\main\\res\\layout\\app_bar_main.xml"
     },

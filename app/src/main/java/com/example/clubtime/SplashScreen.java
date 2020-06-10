@@ -34,6 +34,7 @@ public class SplashScreen extends AppCompatActivity {
         ivLogo = findViewById(R.id.ivLogo);
         bouncer = new AnimatorSet();
 
+
         //OBTENEMOS DIMESIONES DE LA PANTALLA
         DisplayMetrics metrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(metrics);
@@ -46,16 +47,13 @@ public class SplashScreen extends AppCompatActivity {
         a2 = ObjectAnimator.ofFloat(ivLogo, "translationY", (float) (alto - alto/24));
         a2.setDuration(1000);
 
-        a3 = ObjectAnimator.ofFloat(ivLogo, "translationY", (float) (alto - alto/24));
-        a3.setDuration(500);
-
         a4 = ObjectAnimator.ofFloat(ivLogo, "alpha", 1f, 0f);
         a4.setDuration(2000);
 
+
         bouncer.play(a1);
         bouncer.play(a2).after(a1);
-        bouncer.play(a3).after(a2);
-        bouncer.play(a4).after(a3);
+        bouncer.play(a4).after(a2);
 
 //        new Handler().postDelayed(new Runnable() {
 //            @Override
@@ -66,6 +64,7 @@ public class SplashScreen extends AppCompatActivity {
 //
 //            }
 //        },2000);
+
     }
     @Override
     protected void onStart() {
@@ -82,12 +81,12 @@ public class SplashScreen extends AppCompatActivity {
                 super.onAnimationEnd(animation);
                 Intent intent = new Intent(SplashScreen.this,LogIn.class);
                 startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(SplashScreen.this).toBundle());
+                //startActivity(intent);
+                //finish();
             }
 
             @Override
-            public void onAnimationRepeat(Animator animation) {
-                super.onAnimationRepeat(animation);
-            }
+            public void onAnimationRepeat(Animator animation) { super.onAnimationRepeat(animation); }
 
             @Override
             public void onAnimationStart(Animator animation) {

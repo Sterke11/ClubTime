@@ -31,8 +31,8 @@ public class InicioAdmni extends AppCompatActivity implements View.OnClickListen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inicio_admni);
-
-        usuario = (Usuario) Objects.requireNonNull(getIntent().getExtras()).getSerializable("usuario");
+        //GlobalClass gc=(GlobalClass) getApplication();
+        usuario = (Usuario) getIntent().getExtras().getSerializable("usuario");
 
         db = new ConexionDB();
 
@@ -45,13 +45,7 @@ public class InicioAdmni extends AppCompatActivity implements View.OnClickListen
 
         //Accion de agregar un nuevo club desde perfil alumno
 
-       tvCreaClub.setOnClickListener(this);
-
-
-
-
-
-
+        tvCreaClub.setOnClickListener(this);
     }
 
     @Override

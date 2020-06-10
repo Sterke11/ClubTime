@@ -1205,7 +1205,9 @@ id bottom
 id btAdminAgregaClub
 id btAdminCreaClub
 id btAgregaClub
+id btAgregarAdmi
 id btCrearClub
+id btEliminarAdmi
 id btIniciarSesion
 id bt_Registra
 id buttonPanel
@@ -1284,7 +1286,9 @@ id imageView
 id imageView2
 id imgAnt
 id imgEncabezado
+id imgEncabezado2
 id imgLogo
+id imgLogo2
 id imgSig
 id info
 id invisible
@@ -1337,9 +1341,11 @@ id pin
 id progress_circular
 id progress_horizontal
 id radio
+id relativeLayout
 id right
 id right_icon
 id right_side
+id rvAdmon
 id rvClubs
 id save_image_matrix
 id save_non_transition_alpha
@@ -1394,7 +1400,6 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textView
-id text_home
 id text_input_password_toggle
 id text_slideshow
 id textinput_counter
@@ -1413,11 +1418,14 @@ id transition_layout_save
 id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
+id tvAdmon
 id tvAgregaClub
 id tvClubs
 id tvEmail
 id tvPass
 id tvRegistrarse
+id tv_Boleta
+id tv_Correo
 id tv_HorarioDe
 id tv_HorarioDe2
 id tv_HorarioHasta
@@ -1526,6 +1534,7 @@ layout fragment_home
 layout fragment_slideshow
 layout item_void
 layout itemlist
+layout itemlist_administrador
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
 layout nav_header_main

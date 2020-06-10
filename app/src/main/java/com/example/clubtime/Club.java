@@ -19,6 +19,8 @@ public class Club  extends Application implements Serializable {
     private String UserMod;
     private String FechMod;
     private int Foto;
+    private String horaFin;
+    private String horaIni;
 
     public Club() {}
 
@@ -32,9 +34,12 @@ public class Club  extends Application implements Serializable {
         setUserMod(jsonObject.getString("user_mod"));
         setFechMod(jsonObject.getString("fecha_mod"));
         setFoto(-1);
+        setHoraIni(jsonObject.getString("hora_entrada"));
+        setHoraFin(jsonObject.getString("hora_salida"));
+
     }
 
-    public Club(int ID, String alias, String nombre, String contra, String userAlta, String fechAlta, String userMod, String fechMod, int foto) {
+    public Club(int ID, String alias, String nombre, String contra, String userAlta, String fechAlta, String userMod, String fechMod, int foto,String horaIni,String horaFin) {
         this.ID = ID;
         Alias = alias;
         Nombre = nombre;
@@ -44,6 +49,8 @@ public class Club  extends Application implements Serializable {
         UserMod = userMod;
         FechMod = fechMod;
         Foto = foto;
+        this.horaIni=horaIni;
+        this.horaFin=horaFin;
     }
 
     public int getID() { return ID; }
@@ -81,4 +88,12 @@ public class Club  extends Application implements Serializable {
     public int getFoto() { return Foto; }
 
     public void setFoto(int foto) { Foto = foto; }
+
+    public String getHoraFin() { return horaFin; }
+
+    public void setHoraFin(String horaFin) { this.horaFin = horaFin; }
+
+    public String getHoraIni() { return horaIni; }
+
+    public void setHoraIni(String horaIni) {  this.horaIni = horaIni; }
 }

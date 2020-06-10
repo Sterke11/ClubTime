@@ -12,12 +12,13 @@ import java.util.ArrayList;
 
 public class AdapterData extends RecyclerView.Adapter<AdapterData.ViewHolderData> implements View.OnClickListener {
 
-    ArrayList<Club> listaDatos;
+    ArrayList<com.example.clubtime.Club> listaDatos;
     private View.OnClickListener listener;
 
     public AdapterData(ArrayList<Club> listaDatos){
         this.listaDatos=listaDatos;
     }
+
 
     @NonNull
     @Override
