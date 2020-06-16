@@ -4,17 +4,37 @@
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_principal_alumno"
+            android:icon="@drawable/ic_action_home"
+            android:title="Lista Administradores" />
+
+        <item
+            android:id="@+id/nav_list_alumnos_de_alumno"
+            android:icon="@drawable/ic_action_home"
+            android:title="Lista Alumnos" />
+
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/ic_setting_icon"
+            android:icon="@drawable/ic_action_home"
             android:title="Inicio Club" />
         <item
             android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_paloma_blanca"
+            android:icon="@drawable/ic_setting_icon"
             android:title="Configuracion" />
         <item
             android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_action_name"
             android:title="Solicitudes Pendientes" />
+        <item
+            android:id="@+id/nav_enviar_correo"
+            android:icon="@android:drawable/ic_menu_send"
+            android:title="Enviar Correo" />
+
+        <item
+            android:id="@+id/nav_neutral"
+            android:icon="@drawable/ic_setting_icon"
+            android:title="Neutral" />
     </group>
 </menu>

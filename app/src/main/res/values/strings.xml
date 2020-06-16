@@ -21,7 +21,9 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_principal_alumno">Principal_Alumno</string>
     <string name="title_activity_principal_menu_club">PrincipalMenuClub</string>
     <string name="title_activity_principal_menu_club1">PrincipalMenuClubActivity1</string>
     <string name="title_activity_menu_principal_club_admin">MenuPrincipalClubAdmin</string>
+    <string name="title_activity_menu_principal_club_usuario">MenuPrincipalClubUsuario</string>
 </resources>

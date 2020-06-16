@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2" xmlns:ns2="http://schemas.android.com/tools">
+    <array name="colors_array">
+        <item> Green </item>
+        <item> Red   </item>
+    </array>
     <attr format="boolean" name="barrierAllowsGoneWidgets"/>
     <attr format="enum" name="barrierDirection">
         <enum name="left" value="0"/>
@@ -593,6 +597,7 @@
     <string name="hide_bottom_view_on_scroll_behavior" translatable="false">android.support.design.behavior.HideBottomViewOnScrollBehavior</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_home">Home</string>
+    <string name="menu_principal_alumno">Principal_Alumno</string>
     <string name="menu_slideshow">Slideshow</string>
     <string name="mtrl_chip_close_icon_content_description">Remove %1$s</string>
     <string name="nav_app_bar_navigate_up_description">Navigate up</string>
@@ -615,6 +620,7 @@
     <string name="title_activity_menu_inicio">MenuInicio</string>
     <string name="title_activity_menu_principal">MenuPrincipal</string>
     <string name="title_activity_menu_principal_club_admin">MenuPrincipalClubAdmin</string>
+    <string name="title_activity_menu_principal_club_usuario">MenuPrincipalClubUsuario</string>
     <string name="title_activity_principal_menu_club">PrincipalMenuClub</string>
     <string name="title_activity_principal_menu_club1">PrincipalMenuClubActivity1</string>
     <string name="title_activity_prueba">prueba</string>

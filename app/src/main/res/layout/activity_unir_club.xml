@@ -35,7 +35,7 @@
         android:layout_marginTop="128dp"
         android:fontFamily="@font/roboto"
         android:gravity="center"
-        android:text="Introduce el ID del Club y su contraseña"
+        android:text="Introduce el Alias del Club y su contraseña"
         android:textColor="#03A9F4"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -44,24 +44,24 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tv_IDClub"
+        android:id="@+id/tv_AliasClub"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="76dp"
         android:layout_marginTop="100dp"
         android:layout_marginEnd="76dp"
         android:layout_marginBottom="8dp"
-        android:text="ID del Club:"
+        android:text="Alias del Club:"
         android:textColor="#0091BF"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/et_IDClub"
+        app:layout_constraintBottom_toTopOf="@+id/et_AliasClub"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvClubs" />
 
     <EditText
-        android:id="@+id/et_IDClub"
+        android:id="@+id/et_AliasClub"
         android:layout_width="0dp"
         android:layout_height="38dp"
 
@@ -78,7 +78,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_IDClub" />
+        app:layout_constraintTop_toBottomOf="@id/tv_AliasClub" />
 
     <TextView
         android:id="@+id/tv_Pass"
@@ -95,7 +95,7 @@
         app:layout_constraintBottom_toTopOf="@+id/et_Pass"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_IDClub" />
+        app:layout_constraintTop_toBottomOf="@+id/et_AliasClub" />
 
     <EditText
         android:id="@+id/et_Pass"

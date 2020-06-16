@@ -28,32 +28,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/logogrande" />
 
-    <Button
-        android:id="@+id/btAgregaClub"
-        android:layout_width="58dp"
-        android:layout_height="63dp"
-        android:layout_marginEnd="36dp"
-        android:layout_marginBottom="36dp"
-        android:background="@drawable/vector1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <TextView
-        android:id="@+id/tvAgregaClub"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginStart="108dp"
-        android:layout_marginBottom="48dp"
-        android:fontFamily="@font/roboto"
-        android:text="Unete a un Club"
-        android:textColor="#03A9F4"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btAgregaClub"
-        app:layout_constraintHorizontal_bias="0.901"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <TextView
         android:id="@+id/tvClubs"
         android:layout_width="203dp"
@@ -69,5 +43,54 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.8" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvClubAlumno"
+        android:layout_width="359dp"
+        android:layout_height="450dp"
+        android:layout_marginTop="10dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgEncabezado"
+        app:layout_constraintVertical_bias="0" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/imgEncabezado2"
+        tools:ignore="MissingConstraints">
+
+        <com.github.clans.fab.FloatingActionMenu
+
+            android:id="@+id/floatingActionMenu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingRight="25dp"
+            android:paddingBottom="25dp"
+            app:menu_colorNormal="@color/colorPrimary"
+            app:menu_colorPressed="@color/colorPrimary"
+            app:menu_colorRipple="@color/colorPrimary"
+            app:menu_fab_label="Cerrar"
+
+
+            >
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/btAgregarClub"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_new_icon"
+                app:fab_colorNormal="@color/colorPrimary"
+                app:fab_colorPressed="@color/colorPrimary"
+                app:fab_colorRipple="@color/colorPrimary"
+                app:fab_label="Agregar Club" />
+
+        </com.github.clans.fab.FloatingActionMenu>
+
+    </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>

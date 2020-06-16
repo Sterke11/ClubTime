@@ -1,5 +1,9 @@
 package com.example.clubtime;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.Icon;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
@@ -16,10 +20,16 @@ import androidx.navigation.ui.NavigationUI;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.squareup.picasso.Picasso;
 import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Objects;
 import static android.Manifest.permission.CAMERA;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
@@ -39,6 +49,9 @@ public class MenuPrincipalClubAdmin extends AppCompatActivity {
         setSupportActionBar(toolbar);
         FloatingActionButton fab = findViewById(R.id.fab);
 
+        Club club = (Club) getIntent().getSerializableExtra("ative_club");
+        Usuario usuario = (Usuario) Objects.requireNonNull(getIntent().getExtras()).getSerializable("usuario");
+
         //Es el xml del menu lateral
         final DrawerLayout drawer = findViewById(R.id.drawer_layout);
         //Ocultar la barra de accion, por que queda feo jiji
@@ -48,11 +61,31 @@ public class MenuPrincipalClubAdmin extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         //Construccion del menu
+        NavController navController;
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow)
+                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow, R.id.nav_principal_alumno, R.id.nav_list_alumnos_de_alumno,
+                R.id.nav_enviar_correo)
                 .setDrawerLayout(drawer)
                 .build();
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
+
+        if(usuario.getTipo() == 1){
+            Menu nav_menu = navigationView.getMenu();
+            nav_menu.findItem(R.id.nav_principal_alumno).setVisible(false);
+            nav_menu.findItem(R.id.nav_list_alumnos_de_alumno).setVisible(false);
+
+            nav_menu.findItem(R.id.nav_neutral).setVisible(false);
+        }
+        else{
+            Menu nav_menu = navigationView.getMenu();
+            nav_menu.findItem(R.id.nav_home).setVisible(false);
+            nav_menu.findItem(R.id.nav_gallery).setVisible(false);
+            nav_menu.findItem(R.id.nav_slideshow).setVisible(false);
+            nav_menu.findItem(R.id.nav_enviar_correo).setVisible(false);
+
+            nav_menu.findItem(R.id.nav_neutral).setVisible(false);
+        }
+
+        navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
 
@@ -61,9 +94,8 @@ public class MenuPrincipalClubAdmin extends AppCompatActivity {
         TextView tv_menu_nombre_club= hView.findViewById(R.id.tv_menu_nombre_club);
         TextView tv_nombre_usuario=hView.findViewById(R.id.textView);
 
-       //Obtener el club activo
-        Club club = (Club) getIntent().getSerializableExtra("ative_club");
-        Usuario usuario = (Usuario) Objects.requireNonNull(getIntent().getExtras()).getSerializable("usuario");
+        //Obtener el club activo
+
         tv_menu_nombre_club.setText(club.getNombre());
         tv_nombre_usuario.setText(usuario.getNombreUser());
         //Quitar tinta de los iconos
@@ -81,20 +113,22 @@ public class MenuPrincipalClubAdmin extends AppCompatActivity {
         Bundle bundle=new Bundle();
         bundle.putSerializable("usuario",usuario);
         navController.getCurrentDestination();
-       // bundle.putSerializable("club",club);
+        // bundle.putSerializable("club",club);
         //navController.navigate(R.id.nav_gallery,bundle);
-       // navController.navigate(R.id.nav_home,bundle);
+        // navController.navigate(R.id.nav_home,bundle);
         //Validar permisos de fotos
-  //      if(validarPermisos()){
+        //      if(validarPermisos()){
 
-    //    }
+        //    }
 
         GlobalClass gc = (GlobalClass) getApplicationContext();
         clubActivo = club;
         gc.setActive_club(club);
         gc.setActive_user(usuario);
         usuarioActivo = gc.getActive_user();
-        Toast.makeText(getApplicationContext(),gc.getActive_club().getNombre(),Toast.LENGTH_LONG).show();
+        //Toast.makeText(getApplicationContext(),gc.getActive_club().getNombre(),Toast.LENGTH_LONG).show();
+        ImageView img=hView.findViewById(R.id.imageView);
+        Picasso.with(getApplicationContext()).load("https://clubescom.000webhostapp.com/imagenes/"+gc.getActive_club().getAlias()+".jpg").placeholder(R.drawable.sinimagen).into(img);
 
 
     }

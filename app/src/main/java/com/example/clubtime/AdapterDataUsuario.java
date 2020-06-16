@@ -39,7 +39,8 @@ public class AdapterDataUsuario extends RecyclerView.Adapter<AdapterDataUsuario.
     @Override
     public void onBindViewHolder(@NonNull ViewHolderData viewHolderData, int i) {
         if(Utilidades.CON_INFO==Utilidades.status) {
-            viewHolderData.tv_Nombre.setText(listaDatos.get(i).getNombre());
+            String Nombre = listaDatos.get(i).getNombre() + " " + listaDatos.get(i).getApPaterno() + " " + listaDatos.get(i).getApMaterno();
+            viewHolderData.tv_Nombre.setText(Nombre);
             viewHolderData.tv_Correo.setText(listaDatos.get(i).getCorreo());
             viewHolderData.tv_Boleta.setText(listaDatos.get(i).getBoleta());
 //          viewHolderData.iv_ImagenClubList.setImageResource(listaDatos.get(i).getFoto());

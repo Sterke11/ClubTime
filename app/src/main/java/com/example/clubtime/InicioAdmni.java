@@ -25,8 +25,8 @@ public class InicioAdmni extends AppCompatActivity implements View.OnClickListen
     RecyclerView rvClubs;
     FloatingActionButton tvCreaClub;
     ConexionDB db;
-
     Usuario usuario;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

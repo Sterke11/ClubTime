@@ -50,7 +50,7 @@ public class GalleryFragment extends Fragment implements View.OnClickListener {
 
     private GalleryViewModel galleryViewModel;
     private final String CARPETA_RAIZ="clubtime/";
-    private final String RUTA_IMAGEN=MenuPrincipalClubAdmin.getClubActivo().getID()+"-"+MenuPrincipalClubAdmin.getClubActivo().getAlias()+"-"+MenuPrincipalClubAdmin.getClubActivo().getNombre()+"/";
+    private final String RUTA_IMAGEN= MenuPrincipalClubAdmin.getClubActivo().getID()+"-"+MenuPrincipalClubAdmin.getClubActivo().getAlias()+"-"+MenuPrincipalClubAdmin.getClubActivo().getNombre()+"/";
     private final int CARGAR_IMAGEN=10;
     private final int TOMAR_IMAGEN=20;
     String path,fotoString;

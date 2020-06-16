@@ -8,40 +8,45 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
 
+import com.github.clans.fab.FloatingActionButton;
+
+import java.util.ArrayList;
+
 public class InicioAlumno extends AppCompatActivity implements View.OnClickListener{
 
-    RecyclerView rvClubs;
-    RecyclerView.Adapter mAdapter;
-    RecyclerView.LayoutManager layoutManager;
-    Button btAgregaClub;
+    RecyclerView rvClubAlumno;
+    FloatingActionButton btAgregarClub;
+    ConexionDB conexionDB;
+    Usuario usuario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inicio_alumno);
 
+        usuario = (Usuario) getIntent().getExtras().getSerializable("usuario");
+
         //Ocultar la barra de accion, por que queda feo jiji
         getSupportActionBar().hide();
 
         //Inicializamos todos los elementos de la actividad
-        rvClubs = (RecyclerView) findViewById(R.id.rvClubs);
-        layoutManager = new LinearLayoutManager(this);
-        //rvClubs.setLayoutManager(layoutManager);
+        btAgregarClub = findViewById(R.id.btAgregarClub);
+        rvClubAlumno = findViewById(R.id.rvClubAlumno);
 
-        // specify an adapter (see also next example)
+        conexionDB = new ConexionDB();
 
-        btAgregaClub=findViewById(R.id.btAgregaClub);
+        conexionDB.getClubs(usuario, rvClubAlumno,getApplicationContext());
 
         //Accion de agregar un nuevo club desde perfil alumno
-        btAgregaClub.setOnClickListener(this);
-
+        btAgregarClub.setOnClickListener(this);
 
     }
 
     @Override
     public void onClick(View v) {
-        if (v.getId() == R.id.btAgregaClub){
+        if (v.getId() == R.id.btAgregarClub){
             Intent intent = new Intent(this,UnirClub.class);
+            intent.putExtra("usuario", usuario);
             startActivity(intent);
         }
 
