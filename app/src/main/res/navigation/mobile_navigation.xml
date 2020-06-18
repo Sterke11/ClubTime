@@ -22,6 +22,12 @@
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
+        android:id="@+id/nav_ingresar_codigo"
+        android:name="com.example.clubtime.ui.ingresarcodigo.IngresarCodigoFragment"
+        android:label="Ingresar codigo"
+        tools:layout="@layout/fragment_ingresar_codigo" />
+
+    <fragment
         android:id="@+id/nav_neutral"
         android:name="com.example.clubtime.ui.neutral.NeutralFragment"
         android:label="Neutral"
@@ -39,15 +45,20 @@
         android:label="Principal Alumno"
         tools:layout="@layout/fragment_principal_alumno" />
 
-
     <fragment
         android:id="@+id/nav_list_alumnos_de_alumno"
         android:name="com.example.clubtime.ui.listaalumnosdealumno.ListaAlumnosdeAlumnoFragment"
         android:label="Lista de Alumnos de Alumno"
         tools:layout="@layout/fragment_list_alumnos_de_alumno" />
+
     <fragment
         android:id="@+id/nav_enviar_correo"
         android:name="com.example.clubtime.ui.enviarcorreo.EnviarCorreoFragment"
         android:label="Enviar Correo"
         tools:layout="@layout/fragment_enviar_correo" />
+    <fragment
+        android:id="@+id/generaCodigoLista"
+        android:name="com.example.clubtime.ui.generacodigolista.GeneraCodigoListaFragment"
+        android:label="fragment_genera_codigo_lista"
+        tools:layout="@layout/fragment_genera_codigo_lista" />
 </navigation>

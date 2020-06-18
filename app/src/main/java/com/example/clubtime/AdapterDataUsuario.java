@@ -19,7 +19,6 @@ public class AdapterDataUsuario extends RecyclerView.Adapter<AdapterDataUsuario.
         this.listaDatos=listaDatos;
     }
 
-
     @NonNull
     @Override
     public ViewHolderData onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {

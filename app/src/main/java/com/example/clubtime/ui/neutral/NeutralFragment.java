@@ -10,16 +10,10 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import com.example.clubtime.ClubsVo;
 import com.example.clubtime.GlobalClass;
+import com.example.clubtime.InicioAlumno;
 import com.example.clubtime.R;
 import com.example.clubtime.Usuario;
-import com.example.clubtime.ui.listaalumnosdealumno.ListaAlumnosdeAlumnoViewModel;
-
-import java.io.FileDescriptor;
-import java.io.PrintWriter;
-import java.util.List;
 import com.example.clubtime.ui.home.HomeFragment;
 import com.example.clubtime.ui.principalalumno.PrincipalAlumnoFragment;
 
@@ -45,7 +39,7 @@ public class NeutralFragment extends Fragment {
             FragmentTransaction transaction = getFragmentManager().beginTransaction();
             transaction.replace(R.id.frame, new PrincipalAlumnoFragment());
             transaction.commit();
-        }
+    }
 
         return root;
     }

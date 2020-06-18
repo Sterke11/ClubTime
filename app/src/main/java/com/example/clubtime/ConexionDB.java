@@ -7,7 +7,9 @@ import android.os.Parcelable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -146,7 +148,7 @@ public class ConexionDB implements Response.ErrorListener {
         requestQueue.add(jsonArrayRequest);
     }
 
-    public void crearClub(String nombre, String pass , String idClub, Usuario usuario, final Context context){
+    public void crearClub(String nombre, String pass , String idClub, final Usuario usuario, final Context context){
 
         String active_user= usuario.getNombreUser();
 
@@ -173,6 +175,7 @@ public class ConexionDB implements Response.ErrorListener {
                     Toast.makeText(context,"Registro Exitoso",Toast.LENGTH_LONG).show();
                     Intent intent = new Intent(context,InicioAdmni.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    intent.putExtra("usuario", usuario);
 
                     //String message = editText.getText().toString();
                     //intent.putExtra(EXTRA_MESSAGE, message);
@@ -337,7 +340,7 @@ public class ConexionDB implements Response.ErrorListener {
                                 club = new Club(jsonObject);
                                 list.add(club);
                             }
-                            adapter = new AdapterData(list);
+                            adapter = new AdapterData(list,context);
                             final ArrayList<Club> finalList = list;
                             adapter.setOnClickListener(new View.OnClickListener() {
                                 @Override
@@ -804,6 +807,281 @@ public class ConexionDB implements Response.ErrorListener {
         }, this);
         requestQueue= Volley.newRequestQueue(context);
         requestQueue.add(jsonArrayRequest);
+    }
+
+    public void CambiarEstadoClub(final Club clb, final String Estado, final View root){
+        String url = "https://clubescom.000webhostapp.com/consultas.php?idClub="+clb.getID()+"&Estado="+Estado+"&tipo=CambiarEstadoClub";
+        this.context = root.getContext();
+        final TextView tv_Clase = root.findViewById(R.id.tv_Clase);
+        final TextView tv_codigoGenerado = root.findViewById(R.id.tv_codigoGenerado);
+        final Button bt_generaCodigo = root.findViewById(R.id.bt_generaCodigo);
+
+        RequestQueue requestQueue;
+
+        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(url, new Response.Listener<JSONArray>() {
+            @Override
+            public void onResponse(JSONArray response) {
+                JSONObject jsonObject = null;
+                String resp = "";
+
+                try {
+                    jsonObject = response.getJSONObject(0);
+                    resp=jsonObject.getString("respuesta");
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    Toast.makeText(context,"error1",Toast.LENGTH_LONG).show();
+                }
+                if(resp.equals("Actualizado")){
+                    if(clb.getEstado().equals("000000")) {
+                        tv_Clase.setVisibility(View.VISIBLE);
+                        String text = "El codigo generado para la sesión es:\n" + Estado;
+                        tv_codigoGenerado.setText(text);
+                        text = "Terminar clase";
+                        bt_generaCodigo.setText(text);
+                        Toast.makeText(context, "Clase iniciada.", Toast.LENGTH_LONG).show();
+                    }
+                    else {
+                        tv_Clase.setVisibility(View.INVISIBLE);
+                        String text = "Aun no se ha generado un codigo para la clase";
+                        tv_codigoGenerado.setText(text);
+                        text = "Generar Codigo";
+                        bt_generaCodigo.setText(text);
+                        Toast.makeText(context, "Clase finalizada.", Toast.LENGTH_LONG).show();
+                    }
+
+                    clb.setEstado(Estado);
+                } else{
+                    Toast.makeText(context,"Error al generar codigo: "+resp,Toast.LENGTH_LONG).show();
+                }
+
+            }
+        }, this);
+        requestQueue= Volley.newRequestQueue(context);
+        requestQueue.add(jsonArrayRequest);
+
+
+    }
+
+    public void PaseLista(final Club clb, final Usuario usr, final String Codigo, final View root){
+
+        String tiempo = "1:30:00";
+        String url = "https://clubescom.000webhostapp.com/consultas.php?codigo="+Codigo+"&id_club="+clb.getID()+"&id_usuario="+usr.getID()+"&tiempo="+tiempo+"&tipo=PaseLista";
+        this.context = root.getContext();
+
+        final TextView tvEsperar = root.findViewById(R.id.tvEsperar);
+        final TextView tvCodigo = root.findViewById(R.id.tvCodigo);
+        final TextView etCodigo = root.findViewById(R.id.etCodigo);
+        final TextView btCodigo = root.findViewById(R.id.btCodigo);
+
+        RequestQueue requestQueue;
+
+        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(url, new Response.Listener<JSONArray>() {
+            @Override
+            public void onResponse(JSONArray response) {
+                JSONObject jsonObject = null;
+                String resp = "";
+
+                try {
+                    jsonObject = response.getJSONObject(0);
+                    resp=jsonObject.getString("respuesta");
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    Toast.makeText(context,"error1",Toast.LENGTH_LONG).show();
+                }
+                if(resp.equals("Agregado")){
+                    tvCodigo.setVisibility(View.INVISIBLE);
+                    etCodigo.setVisibility(View.INVISIBLE);
+                    btCodigo.setVisibility(View.INVISIBLE);
+                    String text = "¡Ya tomaste asistencia el dia de hoy!";
+                    tvEsperar.setVisibility(View.VISIBLE);
+                    tvEsperar.setText(text);
+                    Toast.makeText(context, "Pase de Lista Completado.", Toast.LENGTH_LONG).show();
+                }
+                else if(resp.equals("Codigo")){
+                    Toast.makeText(context, "Codigo de clase erroneo.", Toast.LENGTH_LONG).show();
+                }
+                else{
+                    Toast.makeText(context,"Error al insertar PaseLista: "+resp,Toast.LENGTH_LONG).show();
+                }
+
+            }
+        }, this);
+        requestQueue= Volley.newRequestQueue(context);
+        requestQueue.add(jsonArrayRequest);
+    }
+
+    public void getClubId(final Club clb, final Usuario usr, final GlobalClass gc, final View root){
+        final TextView tvEsperar = root.findViewById(R.id.tvEsperar);
+        final TextView tvCodigo = root.findViewById(R.id.tvCodigo);
+        final TextView etCodigo = root.findViewById(R.id.etCodigo);
+        final TextView btCodigo = root.findViewById(R.id.btCodigo);
+
+        context = root.getContext();
+
+        String url = "https://clubescom.000webhostapp.com/consultas.php?id_club="+clb.getID()+"&id_usuario="+usr.getID()+"&tipo=getClubId";
+
+        RequestQueue requestQueue;
+        try {
+            JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(url, new Response.Listener<JSONArray>() {
+                @Override
+                public void onResponse(JSONArray response) {
+                    JSONObject jsonObject = null;
+                    try {
+                        jsonObject = response.getJSONObject(0);
+
+                        //resp = jsonObject.getString("nombre_club");
+
+                        if (!jsonObject.getString("nombre_club").equals("none") && !jsonObject.getString("nombre_club").equals("TodaviaNo")) {
+                            club= new Club(jsonObject);
+                            gc.setActive_club(club);
+                            tvCodigo.setVisibility(View.INVISIBLE);
+                            etCodigo.setVisibility(View.INVISIBLE);
+                            btCodigo.setVisibility(View.INVISIBLE);
+                            String text = "¡Ya tomaste asistencia el dia de hoy!";
+                            tvEsperar.setVisibility(View.VISIBLE);
+                            tvEsperar.setText(text);
+                        }
+                        else if(jsonObject.getString("nombre_club").equals("TodaviaNo")){ }
+                        else {
+                            Toast.makeText(context, "Algo salio mal" , Toast.LENGTH_LONG).show();
+                        }
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                        Toast.makeText(context, "error1", Toast.LENGTH_LONG).show();
+                    }
+
+                }
+            }, this);
+
+            requestQueue = Volley.newRequestQueue(context);
+
+            requestQueue.add(jsonArrayRequest);
+        }
+        catch (Exception e){
+            Toast.makeText(context, "No jalo " + e.toString(), Toast.LENGTH_LONG).show();
+        }
+    }
+
+    public void getHorasClub(final Usuario usr, final RecyclerView rvHoras, final TextView tvHoras, final Context context){
+        //GlobalClass gc= (GlobalClass) context;
+
+        String url = "https://clubescom.000webhostapp.com/consultas.php?id_usuario="+usr.getID()+"&tipo=getHorasClub";
+        this.context = context;
+
+        JSONArray data2=new JSONArray();
+        RequestQueue requestQueue;
+        try {
+            JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(url, new Response.Listener<JSONArray>() {
+                @Override
+                public void onResponse(JSONArray response) {
+
+                    JSONObject jsonObject = null;
+                    //String resp = null;
+                    //ArrayList<ClubsVo> list=null;
+                    ArrayList<String> Nombre=null;
+                    ArrayList<String> Horas=null;
+                    AdapterDataHorasAlumno adapter=null;
+
+                    int[] Total = {0,0};
+
+                    try {
+                        jsonObject = response.getJSONObject(0);
+
+                        if (!jsonObject.getString("Nombre").equals("none")) {
+                            Utilidades.status=1;
+
+                            rvHoras.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false));
+                            //list=new ArrayList<ClubsVo>();
+                            Nombre = new ArrayList<String>();
+                            Horas = new ArrayList<String>();
+
+                            for(int i=0;i<response.length();i++){
+                                jsonObject=response.getJSONObject(i);
+                                String aux = jsonObject.getString("Nombre");
+                                Nombre.add(aux);
+                                aux = jsonObject.getString("NoVeces");
+
+                                int[] valor = {0,30};
+                                valor[0] += Integer.parseInt(aux);
+                                valor[1] *= Integer.parseInt(aux);
+                                valor[0] = valor[0] + (valor[1]/60);
+                                valor[1] = valor[1]%60;
+
+                                aux = "";
+                                if(valor[0] < 10)
+                                    aux += "0" + valor[0] + ":";
+                                else
+                                    aux += valor[0] + ":";
+                                if(valor[1] < 10)
+                                    aux += "0" + valor[1] + " hrs.";
+                                else
+                                    aux += valor[1] + " hrs.";
+
+                                Total[0] += valor[0];
+                                Total[1] += valor[1];
+                                Horas.add(aux);
+                            }
+                            adapter = new AdapterDataHorasAlumno(Nombre, Horas);
+                            adapter.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+
+                                    //Toast.makeText(context,"Usted ha seleccionado "+ finalList.get(rvClubs.getChildAdapterPosition(v)).getNombre(),Toast.LENGTH_LONG).show();
+                                    //Intent intent = new Intent(context,MenuPrincipalClubAdmin.class);
+                                    //intent.putExtra("ative_club", finalList.get(rvHoras.getChildAdapterPosition(v)));
+                                    //intent.putExtra("usuario", usuario);
+                                    //intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+                                    //String message = editText.getText().toString();
+                                    //intent.putExtra(EXTRA_MESSAGE, message);
+                                    //context.startActivity(intent);
+
+                                }
+                            });
+                            rvHoras.setAdapter(adapter);
+
+                            Total[0] = Total[0] + (Total[1]/60);
+                            Total[1] = Total[1]%60;
+
+                            String a = "Horas totales: ";
+                            if(Total[0] < 10)
+                                a += "0" + Total[0] + ":";
+                            else
+                                a += Total[0] + ":";
+                            if(Total[1] < 10)
+                                a += "0" + Total[1] + " hrs.";
+                            else
+                                a += Total[1] + " hrs.";
+                            tvHoras.setText(a);
+
+                        } else {
+                            Utilidades.status=0;
+                            Nombre = new ArrayList<String>();
+                            Nombre.add("");
+                            Horas = new ArrayList<String>();
+                            Horas.add("");
+                            rvHoras.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false));
+                            adapter = new AdapterDataHorasAlumno(Nombre, Horas);
+                            rvHoras.setAdapter(adapter);
+
+                            String a = "Todavia no tienes horas empleadas.";
+                            tvHoras.setText(a);
+                        }
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                        Toast.makeText(context, "error1", Toast.LENGTH_LONG).show();
+                    }
+
+                }
+            }, this);
+
+            requestQueue = Volley.newRequestQueue(context);
+
+            requestQueue.add(jsonArrayRequest);
+        }
+        catch (Exception e){
+            Toast.makeText(context, "No jalo " + e.toString(), Toast.LENGTH_LONG).show();
+        }
     }
 
     @Override

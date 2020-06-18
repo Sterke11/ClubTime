@@ -7,13 +7,18 @@
 
         <item
             android:id="@+id/nav_principal_alumno"
-            android:icon="@drawable/ic_action_home"
+            android:icon="@drawable/ic_action_name_lista"
             android:title="Lista Administradores" />
 
         <item
             android:id="@+id/nav_list_alumnos_de_alumno"
-            android:icon="@drawable/ic_action_home"
+            android:icon="@drawable/ic_action_name_lista"
             android:title="Lista Alumnos" />
+
+        <item
+            android:id="@+id/nav_ingresar_codigo"
+            android:icon="@android:drawable/ic_menu_agenda"
+            android:title="Pase de Lista" />
 
         <item
             android:id="@+id/nav_home"
@@ -25,7 +30,7 @@
             android:title="Configuracion" />
         <item
             android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_action_name"
+            android:icon="@drawable/ic_action_name_send"
             android:title="Solicitudes Pendientes" />
         <item
             android:id="@+id/nav_enviar_correo"
@@ -36,5 +41,11 @@
             android:id="@+id/nav_neutral"
             android:icon="@drawable/ic_setting_icon"
             android:title="Neutral" />
+
+        <item
+            android:id="@+id/generaCodigoLista"
+            android:icon="@drawable/ic_action_name_lista"
+            android:title="Generar Codigo Lista" />
+
     </group>
 </menu>

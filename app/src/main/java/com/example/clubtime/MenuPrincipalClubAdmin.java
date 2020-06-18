@@ -24,6 +24,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.squareup.picasso.MemoryPolicy;
+import com.squareup.picasso.NetworkPolicy;
 import com.squareup.picasso.Picasso;
 import java.io.File;
 import java.io.IOException;
@@ -38,7 +40,8 @@ import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
 public class MenuPrincipalClubAdmin extends AppCompatActivity {
     public static Club clubActivo;
     public static Usuario usuarioActivo;
-
+    ImageView img;
+    GlobalClass gc;
     private AppBarConfiguration mAppBarConfiguration;
 
     @Override
@@ -64,7 +67,7 @@ public class MenuPrincipalClubAdmin extends AppCompatActivity {
         NavController navController;
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow, R.id.nav_principal_alumno, R.id.nav_list_alumnos_de_alumno,
-                R.id.nav_enviar_correo)
+                R.id.nav_enviar_correo, R.id.generaCodigoLista, R.id.nav_ingresar_codigo)
                 .setDrawerLayout(drawer)
                 .build();
 
@@ -72,6 +75,7 @@ public class MenuPrincipalClubAdmin extends AppCompatActivity {
             Menu nav_menu = navigationView.getMenu();
             nav_menu.findItem(R.id.nav_principal_alumno).setVisible(false);
             nav_menu.findItem(R.id.nav_list_alumnos_de_alumno).setVisible(false);
+            nav_menu.findItem(R.id.nav_ingresar_codigo).setVisible(false);
 
             nav_menu.findItem(R.id.nav_neutral).setVisible(false);
         }
@@ -81,6 +85,7 @@ public class MenuPrincipalClubAdmin extends AppCompatActivity {
             nav_menu.findItem(R.id.nav_gallery).setVisible(false);
             nav_menu.findItem(R.id.nav_slideshow).setVisible(false);
             nav_menu.findItem(R.id.nav_enviar_correo).setVisible(false);
+            nav_menu.findItem(R.id.generaCodigoLista).setVisible(false);
 
             nav_menu.findItem(R.id.nav_neutral).setVisible(false);
         }
@@ -101,14 +106,7 @@ public class MenuPrincipalClubAdmin extends AppCompatActivity {
         //Quitar tinta de los iconos
         navigationView.setItemIconTintList(null);
         //hacer que el boton de hamburguesa abra el menu lateral
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                /*Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();*/
-                drawer.openDrawer(Gravity.START);
-            }
-        });
+
         //Pasar los objetos a los fragments
         Bundle bundle=new Bundle();
         bundle.putSerializable("usuario",usuario);
@@ -121,14 +119,23 @@ public class MenuPrincipalClubAdmin extends AppCompatActivity {
 
         //    }
 
-        GlobalClass gc = (GlobalClass) getApplicationContext();
+         gc = (GlobalClass) getApplicationContext();
         clubActivo = club;
         gc.setActive_club(club);
         gc.setActive_user(usuario);
         usuarioActivo = gc.getActive_user();
         //Toast.makeText(getApplicationContext(),gc.getActive_club().getNombre(),Toast.LENGTH_LONG).show();
-        ImageView img=hView.findViewById(R.id.imageView);
-        Picasso.with(getApplicationContext()).load("https://clubescom.000webhostapp.com/imagenes/"+gc.getActive_club().getAlias()+".jpg").placeholder(R.drawable.sinimagen).into(img);
+        img=hView.findViewById(R.id.imageView);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                /*Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();*/
+
+                Picasso.with(getApplicationContext()).load("https://clubescom.000webhostapp.com/imagenes/"+gc.getActive_club().getAlias()+".jpg").memoryPolicy(MemoryPolicy.NO_CACHE).networkPolicy(NetworkPolicy.NO_CACHE).placeholder(R.drawable.sinimagen).into(img);
+                drawer.openDrawer(Gravity.START);
+            }
+        });
 
 
     }
@@ -155,6 +162,8 @@ public class MenuPrincipalClubAdmin extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
+
 
 /*
     private boolean validarPermisos() {

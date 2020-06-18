@@ -6,122 +6,135 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="24"
-8-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml
+8-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="29" />
-9-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml
+9-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:6:5-67
-11-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:6:22-64
+11-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml:6:5-67
+11-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml:6:22-64
 12    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-12-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:7:5-80
-12-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:7:22-77
+12-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml:7:5-80
+12-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml:7:22-77
 13    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-13-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:8:5-81
-13-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:8:22-78
+13-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml:8:5-81
+13-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml:8:22-78
 14    <uses-permission android:name="android.permission.CAMERA" />
-14-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:9:5-65
-14-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:9:22-62
+14-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml:9:5-65
+14-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml:9:22-62
 15
 16    <application
-16-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:11:5-54:19
+16-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml:11:5-59:19
 17        android:name="com.example.clubtime.GlobalClass"
-17-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:12:9-36
+17-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml:12:9-36
 18        android:allowBackup="true"
-18-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:13:9-35
+18-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml:13:9-35
 19        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
 19-->[com.android.support:support-compat:28.0.0] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\ccbd3881d3e597a650ace942161206f5\support-compat-28.0.0\AndroidManifest.xml:22:18-91
 20        android:debuggable="true"
 21        android:extractNativeLibs="false"
 22        android:icon="@mipmap/ic_launcher"
-22-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:14:9-43
+22-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml:14:9-43
 23        android:label="@string/app_name"
-23-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:15:9-41
+23-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml:15:9-41
 24        android:requestLegacyExternalStorage="true"
-24-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:16:9-52
+24-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml:16:9-52
 25        android:roundIcon="@mipmap/ic_launcher_round"
-25-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:17:9-54
+25-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml:17:9-54
 26        android:supportsRtl="true"
-26-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:18:9-35
+26-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml:18:9-35
 27        android:testOnly="true"
 28        android:theme="@style/AppTheme" >
-28-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:19:9-40
-29        <activity
-29-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:21:9-24:59
-30            android:name="com.example.clubtime.MenuPrincipalClubAdmin"
-30-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:22:13-51
-31            android:label="@string/title_activity_menu_principal_club_admin"
-31-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:23:13-77
-32            android:theme="@style/AppTheme.NoActionBar" />
-32-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:24:13-56
-33        <activity android:name="com.example.clubtime.SplashScreen" >
-33-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:25:9-31:20
-33-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:25:19-47
-34            <intent-filter>
-34-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:26:13-30:29
-35                <action android:name="android.intent.action.MAIN" />
-35-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:27:17-69
-35-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:27:25-66
-36
-37                <category android:name="android.intent.category.LAUNCHER" />
-37-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:29:17-77
-37-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:29:27-74
-38            </intent-filter>
-39        </activity>
-40        <activity android:name="com.example.clubtime.UnirClub" />
-40-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:32:9-46
-40-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:32:19-43
-41        <activity android:name="com.example.clubtime.CrearClub" />
-41-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:33:9-47
-41-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:33:19-44
-42        <activity android:name="com.example.clubtime.InicioAdmni" />
-42-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:34:9-49
-42-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:34:19-46
-43        <activity android:name="com.example.clubtime.SignUp" />
-43-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:35:9-44
-43-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:35:19-41
-44        <activity android:name="com.example.clubtime.InicioAlumno" />
-44-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:36:9-50
-44-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:36:19-47
-45        <activity
-45-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:37:9-40:59
-46            android:name="com.example.clubtime.MenuInicio"
-46-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:38:13-39
-47            android:label="@string/title_activity_menu_inicio"
-47-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:39:13-63
-48            android:theme="@style/AppTheme.NoActionBar" />
-48-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:40:13-56
-49        <activity android:name="com.example.clubtime.LogIn" />
-49-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:41:9-43
-49-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:41:19-40
-50
-51        <provider
-52            android:name="android.support.v4.content.FileProvider"
-52-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:44:13-67
-53            android:authorities="com.example.clubtime.provider"
-53-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:45:13-60
-54            android:exported="false"
-54-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:46:13-37
-55            android:grantUriPermissions="true" >
-55-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:47:13-47
-56            <meta-data
-56-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:49:13-52:25
-57                android:name="android.support.FILE_PROVIDER_PATHS"
-57-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:50:17-67
-58                android:resource="@xml/provider_paths" >
-58-->D:\Superior\4 Semestre\ADOO\ClubTime\app\src\main\AndroidManifest.xml:51:17-55
-59            </meta-data>
-60        </provider>
-61        <provider
-61-->[android.arch.lifecycle:extensions:1.1.1] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\280574ab331d6899a7e8badab855b8e7\extensions-1.1.1\AndroidManifest.xml:23:9-27:43
-62            android:name="android.arch.lifecycle.ProcessLifecycleOwnerInitializer"
-62-->[android.arch.lifecycle:extensions:1.1.1] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\280574ab331d6899a7e8badab855b8e7\extensions-1.1.1\AndroidManifest.xml:24:13-83
-63            android:authorities="com.example.clubtime.lifecycle-trojan"
-63-->[android.arch.lifecycle:extensions:1.1.1] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\280574ab331d6899a7e8badab855b8e7\extensions-1.1.1\AndroidManifest.xml:25:13-68
-64            android:exported="false"
-64-->[android.arch.lifecycle:extensions:1.1.1] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\280574ab331d6899a7e8badab855b8e7\extensions-1.1.1\AndroidManifest.xml:26:13-37
-65            android:multiprocess="true" />
-65-->[android.arch.lifecycle:extensions:1.1.1] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\280574ab331d6899a7e8badab855b8e7\extensions-1.1.1\AndroidManifest.xml:27:13-40
-66    </application>
-67
-68</manifest>
+28-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml:19:9-40
+29        <activity android:name="com.example.clubtime.InformeAlumno" >
+29-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml:20:9-26:20
+29-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml:20:19-48
+30            <intent-filter>
+30-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml:21:13-25:29
+31                <action android:name="android.intent.action.MAIN" />
+31-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml:22:17-69
+31-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml:22:25-66
+32
+33                <category android:name="android.intent.category.LAUNCHER" />
+33-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml:24:17-77
+33-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml:24:27-74
+34            </intent-filter>
+35        </activity>
+36        <activity
+36-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml:27:9-30:59
+37            android:name="com.example.clubtime.MenuPrincipalClubAdmin"
+37-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml:28:13-51
+38            android:label="@string/title_activity_menu_principal_club_admin"
+38-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml:29:13-77
+39            android:theme="@style/AppTheme.NoActionBar" />
+39-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml:30:13-56
+40        <activity android:name="com.example.clubtime.SplashScreen" >
+40-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml:31:9-37:20
+40-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml:31:19-47
+41            <intent-filter>
+41-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml:21:13-25:29
+42                <action android:name="android.intent.action.MAIN" />
+42-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml:22:17-69
+42-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml:22:25-66
+43
+44                <category android:name="android.intent.category.LAUNCHER" />
+44-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml:24:17-77
+44-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml:24:27-74
+45            </intent-filter>
+46        </activity>
+47        <activity android:name="com.example.clubtime.UnirClub" />
+47-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml:38:9-46
+47-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml:38:19-43
+48        <activity android:name="com.example.clubtime.CrearClub" />
+48-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml:39:9-47
+48-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml:39:19-44
+49        <activity android:name="com.example.clubtime.InicioAdmni" />
+49-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml:40:9-49
+49-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml:40:19-46
+50        <activity android:name="com.example.clubtime.SignUp" />
+50-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml:41:9-44
+50-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml:41:19-41
+51        <activity android:name="com.example.clubtime.InicioAlumno" />
+51-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml:42:9-50
+51-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml:42:19-47
+52        <activity
+52-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml:43:9-46:59
+53            android:name="com.example.clubtime.MenuInicio"
+53-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml:44:13-39
+54            android:label="@string/title_activity_menu_inicio"
+54-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml:45:13-63
+55            android:theme="@style/AppTheme.NoActionBar" />
+55-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml:46:13-56
+56        <activity android:name="com.example.clubtime.LogIn" />
+56-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml:47:9-43
+56-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml:47:19-40
+57
+58        <provider
+59            android:name="android.support.v4.content.FileProvider"
+59-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml:50:13-67
+60            android:authorities="com.example.clubtime.provider"
+60-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml:51:13-60
+61            android:exported="false"
+61-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml:52:13-37
+62            android:grantUriPermissions="true" >
+62-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml:53:13-47
+63            <meta-data
+63-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml:55:13-57:68
+64                android:name="android.support.FILE_PROVIDER_PATHS"
+64-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml:56:17-67
+65                android:resource="@xml/provider_paths" />
+65-->C:\Users\dacov\Downloads\ClubTime-master\app\src\main\AndroidManifest.xml:57:17-55
+66        </provider>
+67        <provider
+67-->[android.arch.lifecycle:extensions:1.1.1] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\280574ab331d6899a7e8badab855b8e7\extensions-1.1.1\AndroidManifest.xml:23:9-27:43
+68            android:name="android.arch.lifecycle.ProcessLifecycleOwnerInitializer"
+68-->[android.arch.lifecycle:extensions:1.1.1] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\280574ab331d6899a7e8badab855b8e7\extensions-1.1.1\AndroidManifest.xml:24:13-83
+69            android:authorities="com.example.clubtime.lifecycle-trojan"
+69-->[android.arch.lifecycle:extensions:1.1.1] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\280574ab331d6899a7e8badab855b8e7\extensions-1.1.1\AndroidManifest.xml:25:13-68
+70            android:exported="false"
+70-->[android.arch.lifecycle:extensions:1.1.1] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\280574ab331d6899a7e8badab855b8e7\extensions-1.1.1\AndroidManifest.xml:26:13-37
+71            android:multiprocess="true" />
+71-->[android.arch.lifecycle:extensions:1.1.1] C:\Users\dacov\.gradle\caches\transforms-2\files-2.1\280574ab331d6899a7e8badab855b8e7\extensions-1.1.1\AndroidManifest.xml:27:13-40
+72    </application>
+73
+74</manifest>

@@ -1,5 +1,6 @@
 package com.example.clubtime;
 
+import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -14,11 +15,15 @@ public class AdapterData extends RecyclerView.Adapter<AdapterData.ViewHolderData
 
     ArrayList<com.example.clubtime.Club> listaDatos;
     private View.OnClickListener listener;
+    Context context;
 
     public AdapterData(ArrayList<Club> listaDatos){
         this.listaDatos=listaDatos;
     }
-
+    public AdapterData(ArrayList<Club> listaDatos, Context context){
+        this.listaDatos=listaDatos;
+        this.context=context;
+    }
 
     @NonNull
     @Override
@@ -39,9 +44,11 @@ public class AdapterData extends RecyclerView.Adapter<AdapterData.ViewHolderData
     @Override
     public void onBindViewHolder(@NonNull ViewHolderData viewHolderData, int i) {
         if(Utilidades.CON_INFO==Utilidades.status) {
-            viewHolderData.tv_NombreClubList.setText(listaDatos.get(i).getNombre());
+            String Nombre = listaDatos.get(i).getNombre();
+            viewHolderData.tv_NombreClubList.setText(Nombre);
             viewHolderData.tv_InfoList.setText(listaDatos.get(i).getFechAlta());
-//        viewHolderData.iv_ImagenClubList.setImageResource(listaDatos.get(i).getFoto());
+            listaDatos.get(i).getFoto(viewHolderData.iv_ImagenClubList,context);
+
         }else{
             viewHolderData.tv_SinResultados.setText("Sin Clubs");
         }

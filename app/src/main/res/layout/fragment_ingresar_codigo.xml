@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ingresarcodigo.IngresarCodigoFragment">
+
+    <ImageView
+        android:id="@+id/imgEncabezado3"
+        android:layout_width="412dp"
+        android:layout_height="100dp"
+        android:padding="0px"
+        android:paddingTop="0px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/rectangle1" />
+
+    <ImageView
+        android:id="@+id/imgLogo3"
+        android:layout_width="200dp"
+        android:layout_height="129dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgEncabezado3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/logogrande" />
+
+    <TextView
+        android:id="@+id/tvClase"
+        android:layout_width="280dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:text="Clase No Iniciada"
+        android:textColor="#2196F3"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgEncabezado3" />
+
+    <TextView
+        android:id="@+id/tvEsperar"
+        android:layout_width="280dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:text="Por favor espera que algún administrador inicie la clase"
+        android:textColor="#2196F3"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvClase" />
+
+    <TextView
+        android:id="@+id/tvCodigo"
+        android:layout_width="280dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="100dp"
+        android:text="Ingrese el Codigo:"
+        android:textColor="#2196F3"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvClase" />
+
+    <EditText
+        android:id="@+id/etCodigo"
+        android:layout_width="280dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/rounded_border_textview"
+        android:inputType="text"
+        android:paddingLeft="10px"
+        android:paddingTop="10px"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="#0091BF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCodigo" />
+
+    <Button
+        android:id="@+id/btCodigo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/botonazulfuertea"
+        android:paddingBottom="15px"
+        android:text="Ingresar Codigo"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.519"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEsperar" />
+
+</android.support.constraint.ConstraintLayout>

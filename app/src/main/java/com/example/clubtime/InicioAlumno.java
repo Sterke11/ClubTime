@@ -16,6 +16,7 @@ public class InicioAlumno extends AppCompatActivity implements View.OnClickListe
 
     RecyclerView rvClubAlumno;
     FloatingActionButton btAgregarClub;
+    FloatingActionButton btInforme;
     ConexionDB conexionDB;
     Usuario usuario;
 
@@ -31,6 +32,7 @@ public class InicioAlumno extends AppCompatActivity implements View.OnClickListe
 
         //Inicializamos todos los elementos de la actividad
         btAgregarClub = findViewById(R.id.btAgregarClub);
+        btInforme = findViewById(R.id.btInforme);
         rvClubAlumno = findViewById(R.id.rvClubAlumno);
 
         conexionDB = new ConexionDB();
@@ -39,6 +41,7 @@ public class InicioAlumno extends AppCompatActivity implements View.OnClickListe
 
         //Accion de agregar un nuevo club desde perfil alumno
         btAgregarClub.setOnClickListener(this);
+        btInforme.setOnClickListener(this);
 
     }
 
@@ -46,6 +49,11 @@ public class InicioAlumno extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         if (v.getId() == R.id.btAgregarClub){
             Intent intent = new Intent(this,UnirClub.class);
+            intent.putExtra("usuario", usuario);
+            startActivity(intent);
+        }
+        else if(v.getId() == R.id.btInforme){
+            Intent intent = new Intent(this, InformeAlumno.class);
             intent.putExtra("usuario", usuario);
             startActivity(intent);
         }

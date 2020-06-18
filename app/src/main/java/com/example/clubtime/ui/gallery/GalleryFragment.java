@@ -14,6 +14,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.support.design.widget.NavigationView;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.content.FileProvider;
 import android.text.format.DateFormat;
@@ -30,6 +31,7 @@ import android.support.v4.app.Fragment;
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 import com.example.clubtime.Club;
 import com.example.clubtime.ConexionDB;
@@ -38,6 +40,9 @@ import com.example.clubtime.MenuPrincipalClubAdmin;
 import com.example.clubtime.R;
 import com.example.clubtime.Usuario;
 import com.github.clans.fab.FloatingActionButton;
+import com.squareup.picasso.MemoryPolicy;
+import com.squareup.picasso.NetworkPolicy;
+import com.squareup.picasso.Picasso;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -94,6 +99,9 @@ public class GalleryFragment extends Fragment implements View.OnClickListener {
             }
         });
         gc=(GlobalClass) getActivity().getApplicationContext();
+        if(!gc.getActive_club().getHoraIni().equals("00:00:00"))   tv_hora_ini.setText(gc.getActive_club().getHoraIni());
+        if(!gc.getActive_club().getHoraFin().equals("00:00:00"))   tv_hora_fin.setText(gc.getActive_club().getHoraFin());
+        Picasso.with(getActivity().getApplicationContext()).load("https://clubescom.000webhostapp.com/imagenes/"+gc.getActive_club().getAlias()+".jpg").memoryPolicy(MemoryPolicy.NO_CACHE).networkPolicy(NetworkPolicy.NO_CACHE).placeholder(R.drawable.sinimagen).into(iv_CargarImagen);
         return root;
     }
 
@@ -221,8 +229,11 @@ public class GalleryFragment extends Fragment implements View.OnClickListener {
 
             bd.asignarFotoHorarioClub(gc.getActive_user(),gc.getActive_club(),horario,fotoString,getActivity().getApplicationContext());
 
-            //NavigationView navigationView = (NavigationView) getActivity().findViewById(R.id.nav_view);
-            //View headerView = navigationView.getHeaderView(0);
+           // NavigationView navigationView = (NavigationView) getActivity().findViewById(R.id.nav_view);
+           // View headerView = navigationView.getHeaderView(0);
+           // ImageView img=headerView.findViewById(R.id.imageView);
+            //Picasso.with(getActivity().getApplicationContext()).load("https://clubescom.000webhostapp.com/imagenes/"+gc.getActive_club().getAlias()+".jpg").memoryPolicy(MemoryPolicy.NO_CACHE).networkPolicy(NetworkPolicy.NO_CACHE).placeholder(R.drawable.sinimagen).into(img);
+            //Toast.makeText(getActivity().getApplicationContext(),"dentro de is creados a ber si esta entransdo aqui",Toast.LENGTH_LONG).show();
 
         }
 

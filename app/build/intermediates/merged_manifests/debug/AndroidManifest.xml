@@ -26,6 +26,13 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.example.clubtime.InformeAlumno" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="com.example.clubtime.MenuPrincipalClubAdmin"
             android:label="@string/title_activity_menu_principal_club_admin"
@@ -55,8 +62,7 @@
             android:grantUriPermissions="true" >
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/provider_paths" >
-            </meta-data>
+                android:resource="@xml/provider_paths" />
         </provider>
         <provider
             android:name="android.arch.lifecycle.ProcessLifecycleOwnerInitializer"
